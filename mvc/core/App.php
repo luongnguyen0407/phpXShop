@@ -8,6 +8,7 @@ class App
     {
         // Array ( [0] => Home [1] => abc [2] => 23 )
         $arrUrl = $this->UrlProcess();
+        print_r($this->params);
         if ($arrUrl) {
             // Handle controller
             if (file_exists("./mvc/controllers/" . $arrUrl[0] . ".php")) {

@@ -1,14 +1,20 @@
 <?php
 class Product extends Controller
 {
-    function Show()
+    public $productModal;
+
+    function __construct()
     {
-        $product = $this->callModal('ProductModal');
-        echo $product->getAllProduct();
-        $total = 1;
-        $this->callView('HomePage', [
-            'Page' => 'test1',
-            'Total' => $total
+        //modal
+        $this->productModal = $this->callModal('ProductModal');
+    }
+
+    function Show($page = null)
+    {
+        echo $page;
+        $this->callView('Master1', [
+            'Page' => 'ProductPage',
+            'Product' => $this->productModal->getAllProduct()
         ]);
     }
     function detailProduct($id)
