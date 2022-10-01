@@ -2,7 +2,7 @@
 class App
 {
     protected $controller = 'PageNotPound';
-    protected $action;
+    protected $action = 'Show';
     protected $params = [];
     function __construct()
     {
@@ -15,6 +15,7 @@ class App
                 unset($arrUrl[0]);
             }
             require_once "./mvc/controllers/" . $this->controller . ".php";
+            $this->controller = new $this->controller;
             //handle action
             if (isset($arrUrl[1])) {
                 if (method_exists($this->controller, $arrUrl[1])) {
@@ -22,7 +23,7 @@ class App
                 }
                 unset($arrUrl[1]);
             }
-            $this->params = $arrUrl ? array_values($arrUrl) : [1];
+            $this->params = $arrUrl ? array_values($arrUrl) : [];
             call_user_func_array([$this->controller, $this->action], $this->params);
         } else {
             require_once "./mvc/controllers/Home.php";

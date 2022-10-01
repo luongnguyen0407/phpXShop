@@ -1,9 +1,15 @@
 <?php
-class Product
+class Product extends Controller
 {
-    function showProduct()
+    function Show()
     {
-        echo 'showProduct';
+        $product = $this->callModal('ProductModal');
+        echo $product->getAllProduct();
+        $total = 1;
+        $this->callView('HomePage', [
+            'Page' => 'test1',
+            'Total' => $total
+        ]);
     }
     function detailProduct($id)
     {
