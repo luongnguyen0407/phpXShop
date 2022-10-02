@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+body {
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 10px;
+  min-height: 100vh;
+  background: #0084b1 url("../img/avatar.png") no-repeat left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth_main {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 60%;
+  min-height: 500px;
+  position: relative;
+  gap: 10px;
+}
+.wrapper_form_auth {
+  padding: 20px 50px;
+  width: 50%;
+  position: relative;
+  z-index: 10;
+  background-color: white;
+}
+.wrapper_img_auth {
+  width: 50%;
+}
+.wrapper_img_auth img {
+  min-height: 100%;
+  object-fit: cover;
+}
+.form_auth_title {
+  font-weight: 700;
+  font-size: 38px;
+  color: #414042;
+}
+.form_auth_filed {
+  margin-bottom: 10px;
+}
+.form_auth_filed input {
+  padding: 5px 17px;
+  width: 100%;
+  border: 1px solid #bcbec0;
+  border-radius: 100rem;
+}
+.form_auth_filed label {
+  font-weight: 400;
+  font-size: 14px;
+  color: #414042;
+}
+.form_auth_filed .error_input {
+  font-size: 12px;
+  color: red;
+}
+.btnSign {
+  padding: 5px 17px;
+  background-color: #a93159;
+  border-radius: 100rem;
+  color: white;
+  width: 100%;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.eyeshow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #5e5873;
+  cursor: pointer;
+  font-size: 12px;
+}
+.loginsocia {
+  display: flex;
+  gap: 11px;
+  margin-top: 10px;
+}
+.loginsocial_item {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  border-radius: 100rem;
+}
+@media only screen and (max-width: 970px) {
+  .wrapper_form_auth {
+    width: 100%;
+  }
+  .wrapper_img_auth {
+    display: none;
+  }
+  .loginsocia {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .auth_main {
+    width: 90%;
+  }
+}

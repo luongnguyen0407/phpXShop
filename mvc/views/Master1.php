@@ -135,8 +135,8 @@
         </footer>
     </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="/xshop/public/js/swiper.js"></script>
-    <script src="/xshop/public/js/header.js"></script>
+    <script src="public/js/swiper.js"></script>
+    <script src="public/js/header.js"></script>
     <!-- JavaScript Bundle with Popper -->
 
     <!-- <script src="./js/main.js"></script> -->
