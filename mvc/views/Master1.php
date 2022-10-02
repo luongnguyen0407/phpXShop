@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/xshop/public/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="/xshop/public/css/main.css">
+    <base href="http://localhost/xshop/" target="_parent">
+    <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="public/css/main.css">
 
     <!-- CSS only -->
     <title>Iphone</title>
@@ -18,14 +19,14 @@
     <div class="main">
         <header class="header" data-aos="fade-down">
             <div class="container header-wrapper">
-                <a href="/xshop/Home"><img src="/xshop/public/images/logotgdd.png" alt="" class="header-logo"></a>
+                <a href="Home"><img src="public/images/logotgdd.png" alt="" class="header-logo"></a>
                 <nav class="menu">
                     <ul class="menu-main">
                         <li class="menu-item">
-                            <a href="./index.php" class="menu-link">Trang Chủ</a>
+                            <a href="Home" class="menu-link">Trang Chủ</a>
                         </li>
                         <li class="menu-item">
-                            <a href="/xshop/Product" class="menu-link">Sản Phẩm</a>
+                            <a href="Product/1" class="menu-link">Sản Phẩm</a>
                         </li>
                         <li class="menu-item">
                             <a href="#" class="menu-link">Chính Sách</a>
