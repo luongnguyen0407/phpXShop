@@ -60,14 +60,14 @@
             if ($current_page > 3) {
                 $first_page = 1;
             ?>
-                <a href="<?= "Product/1" ?>">First</a>
+                <a href="<?= "Product/Page/1" ?>">First</a>
                 <?php
             }
             for ($num = 1; $num <= $total_page; $num++) {
                 if ($num != $current_page) {
                     if ($num > $current_page - 3 && $num < $current_page + 3) {
                 ?>
-                        <a href="<?= "Product/" . $num . "" ?>"><?= $num ?></a>
+                        <a href="<?= "Product/Page" . $num . "" ?>"><?= $num ?></a>
                     <?php
                     }
                 } else {
@@ -79,7 +79,7 @@
             if ($current_page < $total_page - 3) {
                 $end_page = $total_page;
                 ?>
-                <a href="<?= "Product/" . $total_page . "" ?>">End</a>
+                <a href="<?= "Product/Page" . $total_page . "" ?>">End</a>
             <?php
             }
             ?>

@@ -5,7 +5,7 @@ class DB
     protected $servername = 'localhost';
     protected $username = 'root';
     protected $password = '';
-    protected $dbname = 'quanlyshop';
+    protected $dbname = 'xshop';
     function __construct()
     {
         $this->link = mysqli_connect($this->servername, $this->username, $this->password);

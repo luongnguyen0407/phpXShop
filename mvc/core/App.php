@@ -20,12 +20,11 @@ class App
             if (isset($arrUrl[1])) {
                 if (method_exists($this->controller, $arrUrl[1])) {
                     $this->action = $arrUrl[1];
-                    $this->params =  array_values($arrUrl);
-                    // unset($arrUrl[1]);
-                } else {
-                    $this->params = $arrUrl;
                 }
+                unset($arrUrl[1]);
             }
+            $this->params = $arrUrl ? array_values($arrUrl) : [];
+
             call_user_func_array([$this->controller, $this->action], $this->params);
         } else {
             require_once "./mvc/controllers/Home.php";

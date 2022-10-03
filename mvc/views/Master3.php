@@ -46,7 +46,7 @@
                             <div class="cotrol-user">
                                 <a class="dropdown-item">
                                     <i class="fa-solid fa-user"></i> My Profile</a>
-                                <a style="color:black;" href="../index.php" class="dropdown-item"><i class="fa-solid fa-house"></i> Home</a>
+                                <a style="color:black;" href="Home" class="dropdown-item"><i class="fa-solid fa-house"></i> Home</a>
                                 <a style="color:red;" href="../logOut.php" class="dropdown-item"><i class="fa-solid fa-power-off"></i> Sign Out</a>
                             </div>
                         </div>

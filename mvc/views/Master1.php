@@ -10,6 +10,7 @@
     <base href="http://localhost/xshop/" target="_parent">
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/details.css">
 
     <!-- CSS only -->
     <title>Iphone</title>
