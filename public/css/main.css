@@ -723,7 +723,7 @@ h6 {
     align-items: center;
   }
   .detailProduct .text,
-.detailProduct .introl-sp .img {
+  .detailProduct .introl-sp .img {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -810,7 +810,7 @@ h6 {
     padding-left: 0 !important;
   }
   .footer-contact,
-.footer-header {
+  .footer-header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -826,7 +826,7 @@ h6 {
 }
 @media screen and (max-width: 490px) {
   .footer-contact,
-.footer-header {
+  .footer-header {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
@@ -1144,13 +1144,18 @@ h6 {
 .admin-header .user-dropdown .dropdown-menu .cotrol-user .dropdown-item:hover {
   background-color: #ccc;
 }
-.admin-header .user-dropdown .dropdown-menu .cotrol-user .dropdown-item:last-child {
+.admin-header
+  .user-dropdown
+  .dropdown-menu
+  .cotrol-user
+  .dropdown-item:last-child {
   margin-bottom: 10px;
 }
 
 .main-admin {
   background-color: #f4f5f7;
   padding: 20px 0;
+  min-height: 100vh;
 }
 
 .content-memo {
@@ -1240,7 +1245,7 @@ h6 {
   z-index: 2;
   cursor: pointer;
 }
-.form_add_item .input-file input[type=file] {
+.form_add_item .input-file input[type="file"] {
   display: none;
 }
 .form_add_item .input-file .icon-upload {

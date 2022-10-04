@@ -6,6 +6,9 @@ class Register extends Controller
     function __construct()
     {
         //modal
+        if ($this->checkUser()) {
+            header('location: /xshop/Home');
+        }
         $this->userModal = $this->callModal('UserModal');
     }
     function Show()

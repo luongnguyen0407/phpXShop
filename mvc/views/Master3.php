@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="public/css/main.css">
     <script defer src="public/js/admin.js"></script>
-
     <title>Document</title>
 </head>
 
@@ -58,13 +57,13 @@
             <aside class="container aside">
                 <ul class="list-menu">
                     <li>
-                        <a href="./dashboad.php"><i class="ti-stats-up"></i> Dashboard</a>
-                    </li>
-                    <li class="active">
-                        <a href="./listsp.php"><i class="ti-pencil-alt"></i> Thêm sản phẩm </a>
+                        <a href="AddProduct"><i class="ti-stats-up"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="./listsp.php"><i class="ti-gallery"></i> sản phẩm </a>
+                        <a href="AddProduct"><i class="ti-pencil-alt"></i> Thêm sản phẩm </a>
+                    </li>
+                    <li>
+                        <a href="ManageProduct"><i class="ti-gallery"></i> Sản Phẩm </a>
                     </li>
                     <li>
                         <a href="#"><i class="ti-user"></i> thành viên </a>
@@ -76,19 +75,8 @@
             ?>
         </div>
     </div>
-    <script>
-        const inputFile = document.querySelector('.inputFile');
-        const imgPew = document.querySelector('.img-pview');
-        inputFile.addEventListener("change", (e) => {
-            const [file] = e.target.files
-            if (file) {
-                src = URL.createObjectURL(file)
-                imgPew.setAttribute('src', src)
-            }
-        })
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
 </body>
 
 </html>

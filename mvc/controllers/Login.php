@@ -6,6 +6,9 @@ class Login extends Controller
     function __construct()
     {
         //modal
+        if ($this->checkUser()) {
+            header('location: /xshop/Home');
+        }
         $this->userModal = $this->callModal('UserModal');
     }
     function Show()
@@ -34,7 +37,7 @@ class Login extends Controller
                     $checkPass = password_verify($password, $kq["Data"]['password']);
                     if ($checkPass) {
                         $_SESSION['user'] = $kq["Data"];
-                        // header('location: /xshop/Home');
+                        header('location: /xshop/Home');
                         // $kq["Data"]["chucVu"] == 1 ? header('location: ./admin/dashboad.php') : header('location: ./index.php');
                     } else {
                         $err['password'] = "Password hoặc Email không chính xác";

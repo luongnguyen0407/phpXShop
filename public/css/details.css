@@ -178,6 +178,25 @@
   border: 1px solid #ccc;
   margin-top: 20px;
 }
+.content_comment_input {
+  width: 100%;
+  resize: none;
+  padding: 10px;
+  height: 100px;
+  border: 1px solid rgb(56, 129, 134);
+  outline: none;
+  border-radius: 5px;
+}
+.btn-comment {
+  float: right;
+  padding: 5px;
+  width: 150px;
+  cursor: pointer;
+  background-color: rgb(56, 129, 134);
+  border-radius: 12px;
+  border: none;
+  color: white;
+}
 .product_detail_review h3 {
   font-weight: 600;
   font-size: 24px;

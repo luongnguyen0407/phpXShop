@@ -23,13 +23,7 @@ class Product extends Controller
             'Product' => $this->productModal->getProductLimit($offset)
         ]);
     }
-    function Manage()
-    {
-        $this->callView('Master3', [
-            'Page' => 'ManagePage',
-            'Product' => $this->productModal->getAllProduct()
-        ]);
-    }
+
     function Page($page = null, $search = null)
     {
         $total_page = 1;

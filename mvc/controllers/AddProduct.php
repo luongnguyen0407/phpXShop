@@ -6,6 +6,9 @@ class AddProduct extends Controller
     function __construct()
     {
         //modal
+        if (!$this->checkUser(true)) {
+            header('location: /xshop/Home');
+        }
         $this->productModal = $this->callModal('ProductModal');
     }
 

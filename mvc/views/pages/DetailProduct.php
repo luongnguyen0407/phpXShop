@@ -102,9 +102,13 @@ $coImg = 'egcvopsmdu2p8lifho9t.1664783359.webp'
             </div>
         </div>
         <div class="product_detail_review">
+            <form action="" id="comment_form" data-product="<?= $data['Product']['maSanPham'] ?>">
+                <textarea class="content_comment_input" name="comment" placeholder="Enter your comment..."></textarea>
+                <button class="btn-comment">Comment</button>
+            </form>
             <h3>Product Reviews</h3>
             <ul class="product_detail_review_wrapper">
-                <li>
+                <!-- <li>
                     <img src="https://images.unsplash.com/photo-1544481921-fb52f37ba73c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
                     <div class="comment_infor">
                         <p class="name_user_comment">Dian Puspitasari</p>
@@ -157,7 +161,7 @@ $coImg = 'egcvopsmdu2p8lifho9t.1664783359.webp'
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

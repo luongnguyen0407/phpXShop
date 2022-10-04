@@ -60,3 +60,4 @@
         <input type="submit" name="submit" class="btn-add">
     </form>
 </div>
+<link rel="stylesheet" href="public/js/addSp.js">
