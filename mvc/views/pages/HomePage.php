@@ -1,134 +1,399 @@
-<section class="hero">
-    <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <div class="hero-wrap container">
-                    <div class="hero-cloumn1" data-aos="fade-right">
-                        <h3>MacBook Pro M1 2020</h3>
-                        <p>Macbook Pro M1 2020 sở hữu thiết kế sang trọng kế thừa từ các thế hệ trước và bên trong là một cấu hình ấn tượng từ con chip M1 lần đầu tiên xuất hiện trên MacBook Pro, hiệu năng CPU của máy tăng đến 2.8 lần, hiệu năng GPU tăng 5 lần.</p>
-                        <div class="hero-btn">
-                            <a href="./sp.php">Mua Ngay</a>
-                            <a href="./sp.php">Chi Tiết</a>
-                        </div>
-                    </div>
-                    <div class="hero-cloumn2">
-                        <img src="./public/images/mac.png" data-aos="flip-left" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="hero-wrap container">
-                    <div class="hero-cloumn1" data-aos="fade-right">
-                        <h3>Iphone 13 Pro Max</h3>
-                        <p>iPhone 13 Pro Max xứng đáng là một chiếc iPhone lớn nhất, mạnh mẽ nhất và có thời
-                            lượng pin dài nhất từ trước đến nay sẽ cho bạn trải nghiệm tuyệt vời, từ những tác
-                            vụ bình thường cho đến các ứng dụng chuyên nghiệp.</p>
-                        <div class="hero-btn">
-                            <a href="./sp.php">Mua Ngay</a>
-                            <a href="./sp.php">Chi Tiết</a>
-                        </div>
-                    </div>
-                    <div class="hero-cloumn2">
-                        <img src="./public/images/hero.png" data-aos="flip-left" alt="">
-                    </div>
-                </div>
-            </div>
+<section class="hero_collections">
+    <div class="hero_img_flower">
+        <img src="/xshop/public/images/flower1.png" alt="">
+    </div>
+    <div class="container wrap_content_hero">
+        <div class="hero_text">
+            <h3>Collections</h3>
+            <p>you can explore ans shop many differnt collection
+                from various barands here.</p>
+            <button>
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span>shop now</span></button>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="hero_img">
+            <img class="hero_img_show" src="/xshop/public/images/engin-akyurt-jaZoffxg1yc-unsplash 1.png" alt="">
+            <img class="hero_img_border" src="/xshop/public/images/Rectangle 124.png" alt="">
+        </div>
     </div>
 </section>
-<div class="content-product">
+<section class="brand_section">
     <div class="container">
-        <h3 class="headding-product">Điện Thoại Bán Chạy Tháng 7</h3>
-        <div class="wrap-item-dt">
-            <?php
-            $arr = json_decode($data['DT'], true);
-            foreach ($arr as $item) { //foreach element in $arr
-                // $uses = $item['var1']; //etc
-            ?>
-                <div class="sp-one">
-                    <a href="./detail.php?id=<?php echo $item['maSanPham'] ?>">
-                        <div class="tragop">
-                            <span class="lb-tragop">Trả góp 0%</span>
-                        </div>
-                        <div class="item-img">
-                            <img class="item-img-product" alt="Samsung Galaxy M53" src="/xshop/public/imgUp/<?php echo $item['srcImg'] ?>">
-                            <img class="doqu" src="/xshop/public/images/Label_01-05.png">
-                        </div>
-                        <div>
-                            <p class="temp3">
-                                <img src="https://cdn.tgdd.vn/2022/07/content/50x50-50x50-12.png">
-                                <span>ƯU ĐÃI SINH NHẬT</span>
-                            </p>
-                            <h3><?php echo $item['tenSanPham'] ?></h3>
-                            <strong class="price"><?php echo number_format($item['giaSanPham'], 0, ".", ".") . "đ" ?></strong>
-                            <p class="vote-txt">
-                            <div class="wrap-icon">
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            <?php
-            }
-            ?>
+        <div class="brand_img">
+            <img src="/xshop/public/images/brand-1.png" alt="">
+            <img src="/xshop/public/images/brand-5.png" alt="">
+            <img src="/xshop/public/images/brand-3.png" alt="">
+            <img src="/xshop/public/images/brand-2.png" alt="">
+            <img src="/xshop/public/images/brand-4.png" alt="">
         </div>
-        <a href="./sp.php"> <button class="btn-more">Xem Thêm</button></a>
-        <hr>
-        <h3 class="headding-product">Macbook Bán Chạy Tháng 7</h3>
-        <div class="wrap-item-dt">
-            <?php
-            $arr = json_decode($data['LT'], true);
-            foreach ($arr as $item) { //foreach element in $arr
-                // $uses = $item['var1']; //etc
-            ?>
-                <div class="sp-one">
-                    <a href="./detail.php?id=<?php echo $item['maSanPham'] ?>">
-                        <div class="tragop">
-                            <span class="lb-tragop">Trả góp 0%</span>
-                        </div>
-                        <div class="item-img">
-                            <img class="item-img-product" alt="Samsung Galaxy M53" src="/xshop/public/imgUp/<?php echo $item['srcImg'] ?>">
-                            <img class="doqu" src="/xshop/public/images/Label_01-05.png">
-                        </div>
-                        <div>
-                            <p class="temp3">
-                                <img src="https://cdn.tgdd.vn/2022/07/content/50x50-50x50-12.png">
-                                <span>ƯU ĐÃI SINH NHẬT</span>
-                            </p>
-                            <h3><?php echo $item['tenSanPham'] ?></h3>
-                            <strong class="price"><?php echo number_format($item['giaSanPham'], 0, ".", ".") . "đ" ?></strong>
-                            <p class="vote-txt">
-                            <div class="wrap-icon">
-                                <span>4.1</span>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            <?php
-            }
-            ?>
+        <div class="brand_show_img">
+            <div class="brand_show_img_right">
+                <p class="text_brand_deg">Explore new and popular styles</p>
+                <img src="/xshop/public/images/image-category-1.png" alt="">
+            </div>
+            <div class="brand_show_img_left">
+                <img src="/xshop/public/images/image-category-2.png" alt="">
+                <img src="/xshop/public/images/image-category-3.png" alt="">
+                <img src="/xshop/public/images/image-category-4.png" alt="">
+                <img src="/xshop/public/images/image-category-5.png" alt="">
+            </div>
         </div>
-        <a href="./sp.php"> <button class="btn-more">Xem Thêm</button></a>
     </div>
+</section>
+<section class="new_product">
+    <div class="container">
+        <h3>New Products</h3>
+        <ul class="new_product_control">
+            <li class="active">
+                all products
+            </li>
+            <li>
+                t-shirt
+            </li>
+            <li>
+                hoodies
+            </li>
+            <li>
+                jacket
+            </li>
+        </ul>
+        <div class="new_product_content">
+            <div class="new_product_item">
+                <a href="">
+                    <div class="new_product_item_img">
+                        <img src="/xshop/public/images/p1.png" alt="">
+                        <div class="new_product_item_hover">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
+                            </div>
+                            <div class="new_product_item_hover_shopnow">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <p>shop now</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                    <div class="new_product_item_category_cost">
+                        <p class="new_product_item_category">Dress</p>
+                        <p class="new_product_item_cost">$63.85</p>
+                    </div>
+                </a>
+            </div>
+            <div class="new_product_item">
+                <a href="">
+                    <div class="new_product_item_img">
+                        <img src="/xshop/public/images/p2.png" alt="">
+                        <div class="new_product_item_hover">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
+                            </div>
+                            <div class="new_product_item_hover_shopnow">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <p>shop now</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                    <div class="new_product_item_category_cost">
+                        <p class="new_product_item_category">Dress</p>
+                        <p class="new_product_item_cost">$63.85</p>
+                    </div>
+                </a>
+            </div>
+            <div class="new_product_item">
+                <a href="">
+                    <div class="new_product_item_img">
+                        <img src="/xshop/public/images/p3.png" alt="">
+                        <div class="new_product_item_hover">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
+                            </div>
+                            <div class="new_product_item_hover_shopnow">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <p>shop now</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                    <div class="new_product_item_category_cost">
+                        <p class="new_product_item_category">Dress</p>
+                        <p class="new_product_item_cost">$63.85</p>
+                    </div>
+                </a>
+            </div>
+            <div class="new_product_item">
+                <a href="">
+                    <div class="new_product_item_img">
+                        <img src="/xshop/public/images/p4.png" alt="">
+                        <div class="new_product_item_hover">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
+                            </div>
+                            <div class="new_product_item_hover_shopnow">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <p>shop now</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                    <div class="new_product_item_category_cost">
+                        <p class="new_product_item_category">Dress</p>
+                        <p class="new_product_item_cost">$63.85</p>
+                    </div>
+                </a>
+            </div>
+            <div class="new_product_item">
+                <a href="">
+                    <div class="new_product_item_img">
+                        <img src="/xshop/public/images/p5.png" alt="">
+                        <div class="new_product_item_hover">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
+                            </div>
+                            <div class="new_product_item_hover_shopnow">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <p>shop now</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                    <div class="new_product_item_category_cost">
+                        <p class="new_product_item_category">Dress</p>
+                        <p class="new_product_item_cost">$63.85</p>
+                    </div>
+                </a>
+            </div>
+            <div class="new_product_item">
+                <a href="">
+                    <div class="new_product_item_img">
+                        <img src="/xshop/public/images/p6.png" alt="">
+                        <div class="new_product_item_hover">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
+                            </div>
+                            <div class="new_product_item_hover_shopnow">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <p>shop now</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                    <div class="new_product_item_category_cost">
+                        <p class="new_product_item_category">Dress</p>
+                        <p class="new_product_item_cost">$63.85</p>
+                    </div>
+                </a>
+            </div>
+            <div class="new_product_item">
+                <a href="">
+                    <div class="new_product_item_img">
+                        <img src="/xshop/public/images/p7.png" alt="">
+                        <div class="new_product_item_hover">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
+                            </div>
+                            <div class="new_product_item_hover_shopnow">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <p>shop now</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                    <div class="new_product_item_category_cost">
+                        <p class="new_product_item_category">Dress</p>
+                        <p class="new_product_item_cost">$63.85</p>
+                    </div>
+                </a>
+            </div>
+            <div class="new_product_item">
+                <a href="">
+                    <div class="new_product_item_img">
+                        <img src="/xshop/public/images/p8.png" alt="">
+                        <div class="new_product_item_hover">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
+                            </div>
+                            <div class="new_product_item_hover_shopnow">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <p>shop now</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                    <div class="new_product_item_category_cost">
+                        <p class="new_product_item_category">Dress</p>
+                        <p class="new_product_item_cost">$63.85</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="banner_brand">
+    <img class="za" src="/xshop/public/images/1024px-Zara_Logo 1.png" alt="">
+    <div class="banner_brand_img">
+        <img src="/xshop/public/images/brand_banner.png" alt="">
+    </div>
+    <div class="banner_brand_text">
+        <img src="/xshop/public/images/1024px-Zara_Logo 2.png" alt="">
+        <p>Lustrous yet understated. The new evening
+            wear collection exclusively offered at the
+            reopened Giorgio Armani boutique in Los
+            Angeles.</p>
+        <button>See Collection</button>
+    </div>
+</section>
+<section class="best_sale">
+    <div class="container">
+        <h3>Best sellers</h3>
+        <ul class="new_product_control">
+            <li class="active">
+                all products
+            </li>
+            <li>
+                t-shirt
+            </li>
+            <li>
+                hoodies
+            </li>
+            <li>
+                jacket
+            </li>
+        </ul>
+        <div class="wrap_slider_best_sale">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="new_product_item">
+                            <a href="">
+                                <div class="new_product_item_img">
+                                    <img src="/xshop/public/images/p1.png" alt="">
+                                </div>
+                                <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                                <div class="new_product_item_category_cost">
+                                    <p class="new_product_item_category">Dress</p>
+                                    <p class="new_product_item_cost">$63.85</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="new_product_item">
+                            <a href="">
+                                <div class="new_product_item_img">
+                                    <img src="/xshop/public/images/p2.png" alt="">
+                                </div>
+                                <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                                <div class="new_product_item_category_cost">
+                                    <p class="new_product_item_category">Dress</p>
+                                    <p class="new_product_item_cost">$63.85</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="new_product_item">
+                            <a href="">
+                                <div class="new_product_item_img">
+                                    <img src="/xshop/public/images/p3.png" alt="">
+                                </div>
+                                <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                                <div class="new_product_item_category_cost">
+                                    <p class="new_product_item_category">Dress</p>
+                                    <p class="new_product_item_cost">$63.85</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="new_product_item">
+                            <a href="">
+                                <div class="new_product_item_img">
+                                    <img src="/xshop/public/images/p4.png" alt="">
+                                </div>
+                                <div class="new_product_item_name">Adicolor Classics Joggers</div>
+                                <div class="new_product_item_category_cost">
+                                    <p class="new_product_item_category">Dress</p>
+                                    <p class="new_product_item_cost">$63.85</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="flow_section">
+    <div class="container">
+        <div class="flow_top">
+            <div class="title_flow">
+                <h2>Follow products and discounts on flow</h2>
+            </div>
+            <div class="flow_img">
+                <div class="flow_img_item">
+                    <div class="intagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <img src="/xshop/public/images/i011 1.png" alt="">
+                </div>
+                <div class="flow_img_item">
+                    <div class="intagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <img src="/xshop/public/images/i012 1.png" alt="">
+                </div>
+                <div class="flow_img_item">
+                    <div class="intagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <img src="/xshop/public/images/i014 1.png" alt="">
 
-</div>
-</div>
+                </div>
+                <div class="flow_img_item">
+                    <div class="intagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <img src="/xshop/public/images/i02 1.png" alt="">
+
+                </div>
+                <div class="flow_img_item">
+                    <div class="intagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <img src="/xshop/public/images/i03 1.png" alt="">
+
+                </div>
+                <div class="flow_img_item">
+                    <div class="intagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <img src="/xshop/public/images/i07 1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flow_bottom">
+            <div class="title_bottom_flow">
+                <h2>Or subscribe to the newsletter</h2>
+                <div class="input_flow">
+                    <input type="email" name="" id="" placeholder="Email address...">
+                    <button>Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

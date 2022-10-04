@@ -1,0 +1,119 @@
+.best_sale,
+.new_product {
+  margin: 40px 0;
+  h3 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 45px;
+    color: $text-dark;
+  }
+  &_control {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0;
+    li {
+      color: #777777;
+      cursor: pointer;
+      text-transform: capitalize;
+      font-weight: 600;
+      &.active {
+        color: $text-dark;
+      }
+    }
+  }
+  &_content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  &_item {
+    cursor: pointer;
+    a {
+      color: $text-dark;
+      text-decoration: none;
+    }
+    &_hover {
+      display: flex;
+      position: absolute;
+      background-color: #1e2832;
+      color: white;
+      bottom: 0;
+      padding: 0 10px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      height: 0;
+      overflow: hidden;
+      transition: height ease 0.25s;
+      &_shopnow {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        text-transform: capitalize;
+      }
+    }
+    &:hover &_hover {
+      height: 50px;
+    }
+    &_img {
+      position: relative;
+    }
+    img {
+      width: 100%;
+      max-height: 350px;
+      height: 350px;
+      object-fit: cover;
+    }
+    &_name {
+      margin: 10px 0;
+      max-width: 250px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &_category_cost {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &_category {
+      font-weight: 400;
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #777777;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(230, 223, 223);
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    color: #02010ace;
+  }
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after,
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    font-size: 25px !important;
+  }
+}
+@include maxw(1024px) {
+  .new_product_content {
+    @include grid($col: 3, $gap: 20px);
+  }
+}
+@include maxw(768px) {
+  .new_product_content {
+    @include grid($col: 2, $gap: 20px);
+  }
+}
+@include maxw(468px) {
+  .new_product_content {
+    @include grid($col: 1, $gap: 20px);
+  }
+}

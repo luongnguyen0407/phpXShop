@@ -11,134 +11,128 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="public/css/main.css">
-    <link rel="stylesheet" href="public/css/details.css">
-
+    <!-- <link rel="stylesheet" href="public/css/details.css"> -->
     <!-- CSS only -->
     <title>Iphone</title>
 </head>
 
 <body>
     <div class="main">
-        <header class="header" data-aos="fade-down">
-            <div class="container header-wrapper">
-                <a href="Home"><img src="public/images/logotgdd.png" alt="" class="header-logo"></a>
-                <nav class="menu">
-                    <ul class="menu-main">
-                        <li class="menu-item">
-                            <a href="Home" class="menu-link">Trang Chủ</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="Product/1" class="menu-link">Sản Phẩm</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">Chính Sách</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">Liên Hệ</a>
-                        </li>
-                        <li class="menu-item-btn">
-                            <div class="dropdown">
-                                <button class="dropdown-btn">
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./signup.php">Đăng Ký</a></li>
-                                    <li><a class="dropdown-item" href="./login.php">Đăng Nhập</a></li>
-                                    <!-- <li><a class="dropdown-item" href="./admin/dashboad.php">Admin</a></li>
-                                        <li><a class="dropdown-item" href="./cart.php">Giỏ Hàng</a></li>
-                                        <li><a class="dropdown-item" href="./logOut.php">Đăng Xuất</a></li> -->
-                                    ?>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-                <i class="fa-solid fa-bars bar"></i>
+        <header class="header">
+            <div class="heading_header container">
+                <div class="icon_header_search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="header_logo">
+                    <!-- <img src="" alt=""> -->
+                    <p>CORAL</p>
+                </div>
+                <div class="icon_header_right">
+                    <div class="header_flex">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Account</p>
+                    </div>
+                    <div class="header_flex">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>Shoping</p>
+                    </div>
+                </div>
+
             </div>
+            <nav class="list_menu container">
+                <ul class="wrap_link_menu">
+                    <li class="menu_item">
+                        <a href="" class="menu_link">Jewelry & Accessories</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">Clothing & Shoes</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">Home & Living</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">Wedding & Party</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">Toys & Entertainment</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">Art & Collectibles</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="" class="menu_link">Craft Supplies & Tools</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
+
         <?php
         require_once "./mvc/views/pages/" . $data['Page'] . ".php"
         ?>
         <footer class="footer">
             <div class="container">
-                <div class="footer-header ">
-                    <div class="footer-action">
-                        <i class="ti-truck"></i>
-                        <div>
-                            <p>Free shipping</p>
-                            <span>Lorem ipsum dolor sit amet</span>
+                <div class="top_footer ">
+                    <div class="footer_col1">
+                        <div class="left_footer_text">
+                            <img src="/xshop/public/images/Group 98.png" alt="">
+                            <h2>CORAL</h2>
+                            <img src="/xshop/public/images/Group 98.png" alt="">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua</p>
+                        <div class="footer_icon">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-dribbble"></i>
                         </div>
                     </div>
-                    <div class="footer-action">
-                        <i class="ti-headphone"></i>
-                        <div>
-                            <p>Free shipping</p>
-                            <span>Lorem ipsum dolor sit amet</span>
+                    <div class="footer_col">
+                        <h2>CATALOG</h2>
+                        <div class="item_menu">
+                            <p>Necklaces</p>
+                            <p>Hoodies</p>
+                            <p>Jewelry Box</p>
+                            <p>T-shirt</p>
+                            <p>Jacket</p>
                         </div>
                     </div>
-                    <div class="footer-action">
-                        <i class="ti-linux"></i>
-                        <div>
-                            <p>Free shipping</p>
-                            <span>Lorem ipsum dolor sit amet</span>
+                    <div class="footer_col">
+                        <h2>ABOUT US</h2>
+                        <div class="item_menu">
+                            <p>Our Producers</p>
+                            <p>Sitemap</p>
+                            <p>FAQ</p>
+                            <p>About Us</p>
+                            <p>Terms & Conditions</p>
                         </div>
                     </div>
-                    <div class="footer-action">
-                        <i class="ti-shield"></i>
-                        <div>
-                            <p>Free shipping</p>
-                            <span>Lorem ipsum dolor sit amet</span>
+                    <div class="footer_col">
+                        <h2>CUSTOMER SERVICES</h2>
+                        <div class="item_menu">
+                            <p>Contact Us</p>
+                            <p>Track Your Order</p>
+                            <p>Product Care & Repair</p>
+                            <p>Book an Appointment</p>
+                            <p>Shipping & Returns</p>
                         </div>
                     </div>
                 </div>
-                <div class="footer-contact">
-                    <ul class="cols">
-                        <h3>SUPPORT</h3>
-                        <li>Help</li>
-                        <li>Contact Us</li>
-                        <li>Feedback</li>
-                        <li>Unsubscribe</li>
-                        <li>Reservations</li>
-                    </ul>
-                    <ul class="cols">
-                        <h3>POLICIES</h3>
-                        <li>Privacy Policy</li>
-                        <li>Terms of use</li>
-                        <li>Gift card conditions</li>
-                        <li>Shipping</li>
-                        <li>Return</li>
-                    </ul>
-                    <ul class="cols">
-                        <h3>CATEGORIES</h3>
-                        <li>Men</li>
-                        <li>Women</li>
-                        <li>Accessories</li>
-                        <li>Shoes</li>
-                        <li>Denim</li>
-                    </ul>
-                    <ul class="cols">
-                        <h3>STAY UP TO DATE</h3>
-                        <li style="line-height:1.5;margin-bottom:20px ;">Aliquam erat volutpat. Nam dui mi, tincidunt
-                            quis, accumsan.</li>
-                        <div class="input-mail">
-                            <input type="text" placeholder="Enter your email">
-                            <i class="ti-email"></i>
-                        </div>
-
-                        <li>New UI kits or big discounts. Never spam.</li>
-
-                    </ul>
-                </div>
-                <div class="footer-end">
-                    <p>© 2022 code by luongnguyen</p>
-                    <img src="./xshop/public/img/payments.png" alt="">
+            </div>
+            <div class="bottom_footer">
+                <div class="container end_footer ">
+                    <p>© 2022 Coral , Inc.</p>
+                    <img src="/xshop/public/images/icons_payment 1.png" alt="">
+                    <p>Scroll to top</p>
                 </div>
             </div>
         </footer>
     </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="public/js/jquery.js"></script>
+
     <script src="public/js/swiper.js"></script>
-    <script src="public/js/header.js"></script>
     <!-- JavaScript Bundle with Popper -->
 
     <!-- <script src="./js/main.js"></script> -->

@@ -36,7 +36,6 @@
         <div class="onetr">
             <label for="mieuTa">Miêu Tả</label>
             <textarea type="text" name="mieuTa" class="mieuTa">
-            <?php echo (isset($data['mieuTa']) && $data['mieuTa']) ?>
             </textarea>
             <div class="err">
                 <span class="has-err">
