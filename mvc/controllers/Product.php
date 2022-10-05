@@ -8,38 +8,14 @@ class Product extends Controller
         $this->productModal = $this->callModal('ProductModal');
     }
 
-    function Show($page = null, $search = null)
+    function Show()
     {
-        $total_page = 1;
-        $offset = 0;
-        if (is_numeric($page)) {
-            $total =   $this->productModal->getAmountProduct();
-            $total_page = ceil($total / 8);
-        }
         $this->callView('Master1', [
             'Page' => 'ProductPage',
-            'TotalPage' => $total_page,
-            'CurrenPage' => $page,
-            'Product' => $this->productModal->getProductLimit($offset)
+            // 'Product' => $this->productModal->getProductLimit()
         ]);
     }
 
-    function Page($page = null, $search = null)
-    {
-        $total_page = 1;
-        $offset = 1;
-        if (is_numeric($page)) {
-            $offset = ($page - 1) * 8;
-            $total =   $this->productModal->getAmountProduct();
-            $total_page = ceil($total / 8);
-        }
-        $this->callView('Master1', [
-            'Page' => 'ProductPage',
-            'TotalPage' => $total_page,
-            'CurrenPage' => $page,
-            'Product' => $this->productModal->getProductLimit($offset)
-        ]);
-    }
     function detailProduct($id = null)
     {
         if ($id) {

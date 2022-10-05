@@ -108,60 +108,6 @@ $img = json_decode($data['Product']["srcImg"]);
             </form>
             <h3>Product Reviews</h3>
             <ul class="product_detail_review_wrapper">
-                <!-- <li>
-                    <img src="https://images.unsplash.com/photo-1544481921-fb52f37ba73c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
-                    <div class="comment_infor">
-                        <p class="name_user_comment">Dian Puspitasari</p>
-                        <p class="date_user_comment">May 12 2021 7.08 PM</p>
-                        <div class="product_detail_start_vote">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="content_comment">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://images.unsplash.com/photo-1544481921-fb52f37ba73c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
-                    <div class="comment_infor">
-                        <p class="name_user_comment">Dian Puspitasari</p>
-                        <p class="date_user_comment">May 12 2021 7.08 PM</p>
-                        <div class="product_detail_start_vote">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="content_comment">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <img src="https://images.unsplash.com/photo-1544481921-fb52f37ba73c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
-                    <div class="comment_infor">
-                        <p class="name_user_comment">Dian Puspitasari</p>
-                        <p class="date_user_comment">May 12 2021 7.08 PM</p>
-                        <div class="product_detail_start_vote">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="content_comment">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        </p>
-                    </div>
-                </li> -->
             </ul>
         </div>
     </div>

@@ -30,4 +30,14 @@ class Ajax extends Controller
             $this->productModal->getAllProduct();
         }
     }
+
+    function getProductByPagination()
+    {
+        $offset = $_POST['offset'];
+        $this->productModal->getProductLimit($offset, 9, 'product');
+    }
+    function getAmount()
+    {
+        $this->productModal->getAmountProduct();
+    }
 }

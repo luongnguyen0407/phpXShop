@@ -32,6 +32,9 @@
     background-color: #1e2832;
     justify-content: space-between;
   }
+  .scroll_top {
+    cursor: pointer;
+  }
 }
 @include maxw(870px) {
   .footer .top_footer {

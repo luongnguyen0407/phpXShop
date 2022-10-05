@@ -55,6 +55,9 @@
 .content_left_title {
   margin-bottom: 20px;
 }
+.chose .content_left_checkbox {
+  background-color: #18a0fb !important;
+}
 .content_left_input input {
   width: 40%;
   text-align: center;
@@ -67,7 +70,7 @@
   gap: 10px;
 }
 .content_left_apply {
-  padding: 20px 60px;
+  margin: 20px 0;
 }
 .content_left_apply input {
   background: #18a0fb;
@@ -76,6 +79,8 @@
   color: #fff;
   border: none;
   border-radius: 20px;
+  margin: 0 auto;
+  display: block;
 }
 .content_right_input {
   display: flex;
@@ -98,7 +103,7 @@
   margin: 10px 0;
   gap: 10px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .content_right_product_box {
   width: 31%;
@@ -115,6 +120,12 @@
   height: 260px;
   border-radius: 10px;
   object-fit: cover;
+}
+.product_name_fer {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .content_right_product_box_text {
   display: flex;
@@ -170,7 +181,24 @@
 
   color: #fdf6f6;
 }
-
+.wrap-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pagination_item {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.pagination_item.active {
+  background: #000;
+  color: white;
+}
 /* responsive */
 @media only screen and (max-width: 1024px) {
   .content_right_product_box {
@@ -185,13 +213,20 @@
 }
 @media only screen and (max-width: 870px) {
   .product_content_left {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
     height: 100%;
     background-color: white;
     z-index: 1000;
     padding: 20px;
     width: 40%;
     transform: translateX(-110%);
+    transition: transform 0.25s linear;
+  }
+  .product_content_left.active {
+    transform: translateX(0);
   }
   .responsive_bar {
     display: block !important;

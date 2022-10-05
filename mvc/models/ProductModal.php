@@ -18,7 +18,7 @@ class ProductModal extends DB
         $sql = "SELECT *  FROM sanpham";
         $total =  $this->link->query($sql);
         $total = $total->num_rows;
-        return json_encode($total);
+        echo json_encode($total);
     }
     public function queryProduct($id)
     {
@@ -28,16 +28,20 @@ class ProductModal extends DB
         // return json_encode($total);
         return $product;
     }
-    public function getProductLimit($currentPage, $limit = 8)
+    public function getProductLimit($offset, $limit = 9, $pro = null)
     {
         //connect db
-        $sql = "SELECT * FROM sanpham ORDER BY 'maSanPham' ASC LIMIT " . $limit . " OFFSET " . $currentPage . "";
+        $sql = "SELECT * FROM sanpham ORDER BY 'maSanPham' ASC LIMIT " . $limit . " OFFSET " . $offset . "";
         $rows =  mysqli_query($this->link, $sql);
         $arr = array();
         while ($row = mysqli_fetch_array($rows)) {
             $arr[] = $row;
         }
-        return json_encode($arr);
+        if ($pro) {
+            echo json_encode($arr);
+        } else {
+            return json_encode($arr);
+        }
     }
     public function addProduct($tenSP, $danhMuc, $mieuTa, $giaSP, $listImg)
     {

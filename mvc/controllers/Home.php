@@ -13,7 +13,7 @@ class Home extends Controller
     {
         $this->callView('Master1', [
             'Page' => 'HomePage',
-            'Product' => $this->productModal->getProductLimit(1, 5)
+            'Product' => $this->productModal->getProductLimit(0, 5)
         ]);
     }
     function detailProduct($id)

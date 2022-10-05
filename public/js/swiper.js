@@ -23,4 +23,20 @@ window.addEventListener("load", () => {
       },
     },
   });
+
+  // $('.scroll_top').click(()=>{
+  //   const scrollTo = document.querySelector(".heading_header");
+  //   let elmPosition = scrollTo.getBoundingClientRect();
+  //   window.scrollTo({
+  //     top: elmPosition.top,
+  //     behavior: "smooth",
+  //   });
+  // })
+  $(".scroll_top").click(() => {
+    console.log("ok");
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 });

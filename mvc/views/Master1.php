@@ -76,25 +76,25 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
             <nav class="list_menu container">
                 <ul class="wrap_link_menu">
                     <li class="menu_item">
-                        <a href="" class="menu_link">Jewelry & Accessories</a>
+                        <a href="Product" class="menu_link">Jewelry & Accessories</a>
                     </li>
                     <li class="menu_item">
-                        <a href="" class="menu_link">Clothing & Shoes</a>
+                        <a href="Product" class="menu_link">Clothing & Shoes</a>
                     </li>
                     <li class="menu_item">
-                        <a href="" class="menu_link">Home & Living</a>
+                        <a href="Product" class="menu_link">Home & Living</a>
                     </li>
                     <li class="menu_item">
-                        <a href="" class="menu_link">Wedding & Party</a>
+                        <a href="Product" class="menu_link">Wedding & Party</a>
                     </li>
                     <li class="menu_item">
-                        <a href="" class="menu_link">Toys & Entertainment</a>
+                        <a href="Product" class="menu_link">Toys & Entertainment</a>
                     </li>
                     <li class="menu_item">
-                        <a href="" class="menu_link">Art & Collectibles</a>
+                        <a href="Product" class="menu_link">Art & Collectibles</a>
                     </li>
                     <li class="menu_item">
-                        <a href="" class="menu_link">Craft Supplies & Tools</a>
+                        <a href="Product" class="menu_link">Craft Supplies & Tools</a>
                     </li>
                 </ul>
             </nav>
@@ -156,7 +156,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                 <div class="container end_footer ">
                     <p>© 2022 Coral , Inc.</p>
                     <img src="/xshop/public/images/icons_payment 1.png" alt="">
-                    <p>Scroll to top</p>
+                    <p class="scroll_top">Scroll to top</p>
                 </div>
             </div>
         </footer>
