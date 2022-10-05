@@ -35,6 +35,7 @@ $(document).ready(function () {
         idProduct,
       },
       function (data) {
+        console.log("ok");
         $("#comment_form")[0].reset();
         load_comment();
       }

@@ -1,91 +1,390 @@
-<div class="wrapper-sp">
-    <section class="sp-banner">
-        <img src="public/images/banner.png" alt="">
-    </section>
-    <div class="content-product">
-        <div class="container">
-            <form class="search-sp" method="GET">
-                <input placeholder="Nhập sản phẩm cần tìm ..." class="search-sp" type="text" name="query" value="<?= $search ?>">
-                <input class="btn-more" type="submit" value="Tìm Kiếm">
-            </form>
-            <h3 class="headding-product">Sản Phẩm Nổi Bật</h3>
-            <div class="wrap-item-dt">
-                <?php
+<section class="product_main_section">
+    <aside class="products_content container">
+        <div class="product_content_left">
+            <div class="content_left_title">
+                <h3>Products</h3>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>View all</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Dresses</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Tops</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Shirts</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Blouses</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Trousers</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Jeans</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Skirts</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Shorts</p>
+                </div>
+                <p>View more <i class="fa-solid fa-chevron-down"></i></p>
 
-                $arr = json_decode($data['Product'], true);
-                foreach ($arr as $item) { //foreach element in $arr
-                    // $uses = $item['var1']; //etc
-                ?>
-                    <div class="sp-one">
-                        <a href="./detail.php?id=<?php echo $item['maSanPham'] ?>">
-                            <div class="tragop">
-                                <span class="lb-tragop">Trả góp 0%</span>
-                            </div>
-                            <div class="item-img">
-                                <img class="item-img-product" alt="Samsung Galaxy M53" src="public/imgUp/<?php echo $item['srcImg'] ?>">
-                                <img class="doqu" src="public/images/Label_01-05.png">
-                            </div>
-                            <div>
-                                <p class="temp3">
-                                    <img src="https://cdn.tgdd.vn/2022/07/content/50x50-50x50-12.png">
-                                    <span>ƯU ĐÃI SINH NHẬT</span>
-                                </p>
-                                <h3><?php echo $item['tenSanPham'] ?></h3>
-                                <strong class="price"><?php echo number_format($item['giaSanPham'], 0, ".", ".") . "đ" ?></strong>
-                                <p class="vote-txt">
-                                <div class="wrap-icon">
-                                    <span>4.1</span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                <?php
-                }
-                ?>
             </div>
+            <div class="content_left_title">
+                <h3>Categories</h3>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>View all</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Casual</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Office Wear</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Streetwear</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Graduation</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Summery</p>
+                </div>
+                <p>View more <i class="fa-solid fa-chevron-down"></i></p>
 
+            </div>
+            <div class="content_left_title">
+                <h3>Location</h3>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Jabodetabek</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>DKI Jakarta</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Jawa Barat</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Jawa Timur</p>
+                </div>
+                <div class="content_left_text">
+                    <div class="content_left_checkbox"></div>
+                    <p>Jawa Tengah</p>
+                </div>
+                <p>View more <i class="fa-solid fa-chevron-down"></i></p>
+
+            </div>
+            <div class="content_left_title">
+                <h3>Price</h3> <br>
+                <div class="content_left_input">
+                    <input type="text" placeholder="Rp min"> -
+                    <input type="text" placeholder="Rp max">
+                </div>
+                <div class="content_left_apply">
+                    <input type="submit" value="Apply">
+                </div>
+            </div>
+            <div class="wrap_star_product">
+                <div class="content_left_title">
+                    <h3>Rating</h3>
+                    <div class="content_left_text">
+                        <div class="content_left_checkbox"></div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="content_left_text">
+                        <div class="content_left_checkbox"></div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="content_left_text">
+                        <div class="content_left_checkbox"></div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="content_left_text">
+                        <div class="content_left_checkbox"></div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+
+                    </div>
+                    <div class="content_left_text">
+                        <div class="content_left_checkbox"></div>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="wrap-navigate">
-            <?php
-            $current_page =  $data['CurrenPage'];
-            $get_sl_item = 8;
-            $offset = ($current_page - 1) * $get_sl_item;
-            $total_page =  $data['TotalPage'];
-            if ($current_page > 3) {
-                $first_page = 1;
-            ?>
-                <a href="<?= "Product/Page/1" ?>">First</a>
-                <?php
-            }
-            for ($num = 1; $num <= $total_page; $num++) {
-                if ($num != $current_page) {
-                    if ($num > $current_page - 3 && $num < $current_page + 3) {
-                ?>
-                        <a href="<?= "Product/Page" . $num . "" ?>"><?= $num ?></a>
-                    <?php
-                    }
-                } else {
-                    ?>
-                    <a class="ok"><?= $num ?></a>
-                <?php
-                }
-            }
-            if ($current_page < $total_page - 3) {
-                $end_page = $total_page;
-                ?>
-                <a href="<?= "Product/Page" . $total_page . "" ?>">End</a>
-            <?php
-            }
-            ?>
-
+        <div class="product_content_right">
+            <div class="content_right_input">
+                <input type="text" placeholder="Search...">
+                <i class="fa-solid fa-bars responsive_bar"></i>
+            </div>
+            <div class="content_right_products">
+                <div class="content_right_product_box">
+                    <img src="/images/product1.png" alt="">
+                    <div class="content_right_product_box_text">
+                        <p>Vintage Cardigan</p>
+                        <p class="icon_star">4.5 <i class="fa-solid fa-star"></i></p>
+                    </div>
+                    <div class="content_right_product_box_text">
+                        <h3>Rp 150.000,00</h3>
+                        <p>(17)</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-solid fa-clock"></i> 5 days</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-sharp fa-solid fa-house"></i> Jakarta Barat</p>
+                    </div>
+                    <div class="content_right_product_message">
+                        <div class="content_right_product_message_box">
+                            <p><i class="fa-solid fa-message"></i></p>
+                        </div>
+                        <div class="content_right_product_Wishlist_box">
+                            <p>Wishlist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right_product_box">
+                    <img src="/images/product2.png" alt="">
+                    <div class="content_right_product_box_text">
+                        <p>Vintage Cardigan</p>
+                        <p class="icon_star">4.5 <i class="fa-solid fa-star"></i></p>
+                    </div>
+                    <div class="content_right_product_box_text">
+                        <h3>Rp 150.000,00</h3>
+                        <p>(17)</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-solid fa-clock"></i> 5 days</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-sharp fa-solid fa-house"></i> Jakarta Barat</p>
+                    </div>
+                    <div class="content_right_product_message">
+                        <div class="content_right_product_message_box">
+                            <p><i class="fa-solid fa-message"></i></p>
+                        </div>
+                        <div class="content_right_product_Wishlist_box">
+                            <p>Wishlist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right_product_box">
+                    <img src="/images/product3.png" alt="">
+                    <div class="content_right_product_box_text">
+                        <p>Vintage Cardigan</p>
+                        <p class="icon_star">4.5 <i class="fa-solid fa-star"></i></p>
+                    </div>
+                    <div class="content_right_product_box_text">
+                        <h3>Rp 150.000,00</h3>
+                        <p>(17)</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-solid fa-clock"></i> 5 days</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-sharp fa-solid fa-house"></i> Jakarta Barat</p>
+                    </div>
+                    <div class="content_right_product_message">
+                        <div class="content_right_product_message_box">
+                            <p><i class="fa-solid fa-message"></i></p>
+                        </div>
+                        <div class="content_right_product_Wishlist_box">
+                            <p>Wishlist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right_product_box">
+                    <img src="/images/product4.png" alt="">
+                    <div class="content_right_product_box_text">
+                        <p>Vintage Cardigan</p>
+                        <p class="icon_star">4.5 <i class="fa-solid fa-star"></i></p>
+                    </div>
+                    <div class="content_right_product_box_text">
+                        <h3>Rp 150.000,00</h3>
+                        <p>(17)</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-solid fa-clock"></i> 5 days</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-sharp fa-solid fa-house"></i> Jakarta Barat</p>
+                    </div>
+                    <div class="content_right_product_message">
+                        <div class="content_right_product_message_box">
+                            <p><i class="fa-solid fa-message"></i></p>
+                        </div>
+                        <div class="content_right_product_Wishlist_box">
+                            <p>Wishlist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right_product_box">
+                    <img src="/images/product5.png" alt="">
+                    <div class="content_right_product_box_text">
+                        <p>Vintage Cardigan</p>
+                        <p class="icon_star">4.5 <i class="fa-solid fa-star"></i></p>
+                    </div>
+                    <div class="content_right_product_box_text">
+                        <h3>Rp 150.000,00</h3>
+                        <p>(17)</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-solid fa-clock"></i> 5 days</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-sharp fa-solid fa-house"></i> Jakarta Barat</p>
+                    </div>
+                    <div class="content_right_product_message">
+                        <div class="content_right_product_message_box">
+                            <p><i class="fa-solid fa-message"></i></p>
+                        </div>
+                        <div class="content_right_product_Wishlist_box">
+                            <p>Wishlist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right_product_box">
+                    <img src="/images/product6.png" alt="">
+                    <div class="content_right_product_box_text">
+                        <p>Vintage Cardigan</p>
+                        <p class="icon_star">4.5 <i class="fa-solid fa-star"></i></p>
+                    </div>
+                    <div class="content_right_product_box_text">
+                        <h3>Rp 150.000,00</h3>
+                        <p>(17)</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-solid fa-clock"></i> 5 days</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-sharp fa-solid fa-house"></i> Jakarta Barat</p>
+                    </div>
+                    <div class="content_right_product_message">
+                        <div class="content_right_product_message_box">
+                            <p><i class="fa-solid fa-message"></i></p>
+                        </div>
+                        <div class="content_right_product_Wishlist_box">
+                            <p>Wishlist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right_product_box">
+                    <img src="/images/product7.png" alt="">
+                    <div class="content_right_product_box_text">
+                        <p>Vintage Cardigan</p>
+                        <p class="icon_star">4.5 <i class="fa-solid fa-star"></i></p>
+                    </div>
+                    <div class="content_right_product_box_text">
+                        <h3>Rp 150.000,00</h3>
+                        <p>(17)</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-solid fa-clock"></i> 5 days</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-sharp fa-solid fa-house"></i> Jakarta Barat</p>
+                    </div>
+                    <div class="content_right_product_message">
+                        <div class="content_right_product_message_box">
+                            <p><i class="fa-solid fa-message"></i></p>
+                        </div>
+                        <div class="content_right_product_Wishlist_box">
+                            <p>Wishlist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right_product_box">
+                    <img src="/images/product8.png" alt="">
+                    <div class="content_right_product_box_text">
+                        <p>Vintage Cardigan</p>
+                        <p class="icon_star">4.5 <i class="fa-solid fa-star"></i></p>
+                    </div>
+                    <div class="content_right_product_box_text">
+                        <h3>Rp 150.000,00</h3>
+                        <p>(17)</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-solid fa-clock"></i> 5 days</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-sharp fa-solid fa-house"></i> Jakarta Barat</p>
+                    </div>
+                    <div class="content_right_product_message">
+                        <div class="content_right_product_message_box">
+                            <p><i class="fa-solid fa-message"></i></p>
+                        </div>
+                        <div class="content_right_product_Wishlist_box">
+                            <p>Wishlist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right_product_box">
+                    <img src="/images/product9.png" alt="">
+                    <div class="content_right_product_box_text">
+                        <p>Vintage Cardigan</p>
+                        <p class="icon_star">4.5 <i class="fa-solid fa-star"></i></p>
+                    </div>
+                    <div class="content_right_product_box_text">
+                        <h3>Rp 150.000,00</h3>
+                        <p>(17)</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-solid fa-clock"></i> 5 days</p>
+                    </div>
+                    <div class="content_right_product_box_icon">
+                        <p><i class="fa-sharp fa-solid fa-house"></i> Jakarta Barat</p>
+                    </div>
+                    <div class="content_right_product_message">
+                        <div class="content_right_product_message_box">
+                            <p><i class="fa-solid fa-message"></i></p>
+                        </div>
+                        <div class="content_right_product_Wishlist_box">
+                            <p>Wishlist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-</div>
-<script src="public/js/product.js"></script>
+    </aside>
+</section>

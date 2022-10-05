@@ -1,3 +1,6 @@
+<?php
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
+?>
 <!DOCTYPE html>
 <html lang="">
 
@@ -8,9 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <base href="http://localhost/xshop/" target="_parent">
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="public/js/jquery.js"></script>
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/product.css">
     <!-- <link rel="stylesheet" href="public/css/details.css"> -->
     <!-- CSS only -->
     <title>Iphone</title>
@@ -24,18 +28,48 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <div class="header_logo">
-                    <!-- <img src="" alt=""> -->
-                    <p>CORAL</p>
+                    <a href="Home"><img src="/xshop/public/images/xshop.png" alt=""></a>
                 </div>
                 <div class="icon_header_right">
-                    <div class="header_flex">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Account</p>
-                    </div>
-                    <div class="header_flex">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <p>Shoping</p>
-                    </div>
+                    <?php
+                    if (empty($user)) {
+                    ?>
+                        <div class="header_flex">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Account</p>
+                        </div>
+                        <div class="header_flex">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p>Shoping</p>
+                        </div>
+                    <?php
+                    }
+                    if (!empty($user)) {
+                    ?>
+                        <div class="header_flex">
+                            <i class="fa-solid fa-user"></i>
+                            <?php
+                            if ($user['chucVu'] == 1) {
+                            ?>
+
+                                <a href="AddProduct">
+                                    <p><?= $user['userName'] ?></p>
+                                </a>
+                            <?php
+                            } else {
+                            ?>
+                                <p><?= $user['userName'] ?></p>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                        <div class="header_flex">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p>Shoping</p>
+                        </div>
+                    <?php
+                    }
+                    ?>
                 </div>
 
             </div>
@@ -74,9 +108,7 @@
                 <div class="top_footer ">
                     <div class="footer_col1">
                         <div class="left_footer_text">
-                            <img src="/xshop/public/images/Group 98.png" alt="">
-                            <h2>CORAL</h2>
-                            <img src="/xshop/public/images/Group 98.png" alt="">
+                            <img src="/xshop/public/images/xshop.png" alt="">
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
@@ -129,8 +161,8 @@
             </div>
         </footer>
     </div>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="public/js/jquery.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <script src="public/js/swiper.js"></script>
     <!-- JavaScript Bundle with Popper -->

@@ -45,196 +45,21 @@
     <div class="container">
         <h3>New Products</h3>
         <ul class="new_product_control">
-            <li class="active">
+            <li class="get_product_by_category_new active" data-category='all'>
                 all products
             </li>
-            <li>
-                t-shirt
+            <li class="get_product_by_category_new" data-category='Dress'>
+                Dress
             </li>
-            <li>
-                hoodies
+            <li class="get_product_by_category_new" data-category='Shorts'>
+                Shorts
             </li>
-            <li>
+            <li class="get_product_by_category_new" data-category='Shorts'>
                 jacket
             </li>
         </ul>
         <div class="new_product_content">
-            <div class="new_product_item">
-                <a href="">
-                    <div class="new_product_item_img">
-                        <img src="/xshop/public/images/p1.png" alt="">
-                        <div class="new_product_item_hover">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
-                            </div>
-                            <div class="new_product_item_hover_shopnow">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <p>shop now</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                    <div class="new_product_item_category_cost">
-                        <p class="new_product_item_category">Dress</p>
-                        <p class="new_product_item_cost">$63.85</p>
-                    </div>
-                </a>
-            </div>
-            <div class="new_product_item">
-                <a href="">
-                    <div class="new_product_item_img">
-                        <img src="/xshop/public/images/p2.png" alt="">
-                        <div class="new_product_item_hover">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
-                            </div>
-                            <div class="new_product_item_hover_shopnow">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <p>shop now</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                    <div class="new_product_item_category_cost">
-                        <p class="new_product_item_category">Dress</p>
-                        <p class="new_product_item_cost">$63.85</p>
-                    </div>
-                </a>
-            </div>
-            <div class="new_product_item">
-                <a href="">
-                    <div class="new_product_item_img">
-                        <img src="/xshop/public/images/p3.png" alt="">
-                        <div class="new_product_item_hover">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
-                            </div>
-                            <div class="new_product_item_hover_shopnow">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <p>shop now</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                    <div class="new_product_item_category_cost">
-                        <p class="new_product_item_category">Dress</p>
-                        <p class="new_product_item_cost">$63.85</p>
-                    </div>
-                </a>
-            </div>
-            <div class="new_product_item">
-                <a href="">
-                    <div class="new_product_item_img">
-                        <img src="/xshop/public/images/p4.png" alt="">
-                        <div class="new_product_item_hover">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
-                            </div>
-                            <div class="new_product_item_hover_shopnow">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <p>shop now</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                    <div class="new_product_item_category_cost">
-                        <p class="new_product_item_category">Dress</p>
-                        <p class="new_product_item_cost">$63.85</p>
-                    </div>
-                </a>
-            </div>
-            <div class="new_product_item">
-                <a href="">
-                    <div class="new_product_item_img">
-                        <img src="/xshop/public/images/p5.png" alt="">
-                        <div class="new_product_item_hover">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
-                            </div>
-                            <div class="new_product_item_hover_shopnow">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <p>shop now</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                    <div class="new_product_item_category_cost">
-                        <p class="new_product_item_category">Dress</p>
-                        <p class="new_product_item_cost">$63.85</p>
-                    </div>
-                </a>
-            </div>
-            <div class="new_product_item">
-                <a href="">
-                    <div class="new_product_item_img">
-                        <img src="/xshop/public/images/p6.png" alt="">
-                        <div class="new_product_item_hover">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
-                            </div>
-                            <div class="new_product_item_hover_shopnow">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <p>shop now</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                    <div class="new_product_item_category_cost">
-                        <p class="new_product_item_category">Dress</p>
-                        <p class="new_product_item_cost">$63.85</p>
-                    </div>
-                </a>
-            </div>
-            <div class="new_product_item">
-                <a href="">
-                    <div class="new_product_item_img">
-                        <img src="/xshop/public/images/p7.png" alt="">
-                        <div class="new_product_item_hover">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
-                            </div>
-                            <div class="new_product_item_hover_shopnow">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <p>shop now</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                    <div class="new_product_item_category_cost">
-                        <p class="new_product_item_category">Dress</p>
-                        <p class="new_product_item_cost">$63.85</p>
-                    </div>
-                </a>
-            </div>
-            <div class="new_product_item">
-                <a href="">
-                    <div class="new_product_item_img">
-                        <img src="/xshop/public/images/p8.png" alt="">
-                        <div class="new_product_item_hover">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <i class="fa-solid fa-magnifying-glass" style="margin-left:20px;"></i>
-                            </div>
-                            <div class="new_product_item_hover_shopnow">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                                <p>shop now</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                    <div class="new_product_item_category_cost">
-                        <p class="new_product_item_category">Dress</p>
-                        <p class="new_product_item_cost">$63.85</p>
-                    </div>
-                </a>
-            </div>
+            <!-- ajax -->
         </div>
     </div>
 </section>
@@ -255,82 +80,44 @@
 <section class="best_sale">
     <div class="container">
         <h3>Best sellers</h3>
-        <ul class="new_product_control">
-            <li class="active">
-                all products
-            </li>
-            <li>
-                t-shirt
-            </li>
-            <li>
-                hoodies
-            </li>
-            <li>
-                jacket
-            </li>
-        </ul>
         <div class="wrap_slider_best_sale">
             <div class="swiper">
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="new_product_item">
-                            <a href="">
-                                <div class="new_product_item_img">
-                                    <img src="/xshop/public/images/p1.png" alt="">
+                <?php
+                if (isset($data['Product'])) {
+                ?>
+
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <?php
+                        $arr = json_decode($data['Product'], true);
+                        foreach ($arr as $item) { //foreach element in $arr
+                            // $uses = $item['var1']; //etc
+                            $img = json_decode($item['srcImg'])
+                        ?>
+                            <div class="swiper-slide">
+                                <div class="new_product_item">
+                                    <a href="/xshop/Product/detailProduct/<?= $item["maSanPham"] ?>">
+                                        <div class="new_product_item_img">
+                                            <img src="public/imgUp/<?= $img[0] ?>" alt="">
+                                        </div>
+                                        <div class="new_product_item_name"><?= $item["tenSanPham"] ?></div>
+                                        <div class="new_product_item_category_cost">
+                                            <p class="new_product_item_category"><?= $item["maDanhMuc"] ?></p>
+                                            <p class="new_product_item_cost"><?php echo number_format($item['giaSanPham'], 0, ".", ".") . "đ" ?></p>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                                <div class="new_product_item_category_cost">
-                                    <p class="new_product_item_category">Dress</p>
-                                    <p class="new_product_item_cost">$63.85</p>
-                                </div>
-                            </a>
-                        </div>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
                     </div>
-                    <div class="swiper-slide">
-                        <div class="new_product_item">
-                            <a href="">
-                                <div class="new_product_item_img">
-                                    <img src="/xshop/public/images/p2.png" alt="">
-                                </div>
-                                <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                                <div class="new_product_item_category_cost">
-                                    <p class="new_product_item_category">Dress</p>
-                                    <p class="new_product_item_cost">$63.85</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="new_product_item">
-                            <a href="">
-                                <div class="new_product_item_img">
-                                    <img src="/xshop/public/images/p3.png" alt="">
-                                </div>
-                                <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                                <div class="new_product_item_category_cost">
-                                    <p class="new_product_item_category">Dress</p>
-                                    <p class="new_product_item_cost">$63.85</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="new_product_item">
-                            <a href="">
-                                <div class="new_product_item_img">
-                                    <img src="/xshop/public/images/p4.png" alt="">
-                                </div>
-                                <div class="new_product_item_name">Adicolor Classics Joggers</div>
-                                <div class="new_product_item_category_cost">
-                                    <p class="new_product_item_category">Dress</p>
-                                    <p class="new_product_item_cost">$63.85</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                }
+
+                ?>
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -397,3 +184,4 @@
         </div>
     </div>
 </section>
+<script src="/xshop/public/js/home.js"></script>

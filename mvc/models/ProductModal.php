@@ -10,7 +10,7 @@ class ProductModal extends DB
         while ($row = mysqli_fetch_array($rows)) {
             $arr[] = $row;
         }
-        return json_encode($arr);
+        echo json_encode($arr);
     }
     public function getAmountProduct()
     {
@@ -28,10 +28,10 @@ class ProductModal extends DB
         // return json_encode($total);
         return $product;
     }
-    public function getProductLimit($currentPage)
+    public function getProductLimit($currentPage, $limit = 8)
     {
         //connect db
-        $sql = "SELECT * FROM sanpham ORDER BY 'maSanPham' ASC LIMIT 8 OFFSET " . $currentPage . "";
+        $sql = "SELECT * FROM sanpham ORDER BY 'maSanPham' ASC LIMIT " . $limit . " OFFSET " . $currentPage . "";
         $rows =  mysqli_query($this->link, $sql);
         $arr = array();
         while ($row = mysqli_fetch_array($rows)) {

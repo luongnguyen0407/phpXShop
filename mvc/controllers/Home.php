@@ -1,20 +1,19 @@
 <?php
 class Home extends Controller
 {
-    public $homeModal;
+    public $productModal;
 
     function __construct()
     {
         //modal
-        $this->homeModal = $this->callModal('ProductModal');
+        $this->productModal = $this->callModal('ProductModal');
     }
 
     function Show()
     {
         $this->callView('Master1', [
             'Page' => 'HomePage',
-            'DT' => $this->homeModal->getAllProduct('DT'),
-            'LT' => $this->homeModal->getAllProduct('LT')
+            'Product' => $this->productModal->getProductLimit(1, 5)
         ]);
     }
     function detailProduct($id)
