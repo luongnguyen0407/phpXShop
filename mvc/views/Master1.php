@@ -17,7 +17,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     <link rel="stylesheet" href="public/css/product.css">
     <!-- <link rel="stylesheet" href="public/css/details.css"> -->
     <!-- CSS only -->
-    <title>Iphone</title>
+    <title>Xshop</title>
 </head>
 
 <body>

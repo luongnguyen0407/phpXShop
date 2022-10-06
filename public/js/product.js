@@ -10,14 +10,21 @@ $(document).ready(async function () {
   const formatPrice = (number) => {
     return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   };
-  const loadProduct = (offset = 0, isActive = 1) => {
+  const loadProduct = (offset = 0, isActive = 1, category = null) => {
+    const data = category
+      ? {
+          offset,
+          category,
+        }
+      : {
+          offset,
+        };
     $.ajax({
       url: "./Ajax/getProductByPagination",
       method: "POST",
-      data: {
-        offset,
-      },
+      data: data,
       success: function (data) {
+        console.log(data);
         const res = JSON.parse(data);
         if (res.length > 0) {
           $(".content_right_products").text("");
@@ -108,7 +115,9 @@ $(document).ready(async function () {
   listRadio1 = [...listRadio1];
   for (const radio of listRadio1) {
     radio.addEventListener("click", function () {
-      console.log(this);
+      if (!this.matches(".chose")) {
+        loadProduct(0, 1, this.querySelector("p").dataset.category);
+      }
       for (const item of listRadio1) {
         item.classList.remove("chose");
       }

@@ -5,15 +5,15 @@
                 <h3>Products</h3>
                 <div class="content_left_text chose">
                     <div class="content_left_checkbox"></div>
-                    <p>View all</p>
+                    <p data-category='all'>View all</p>
                 </div>
                 <div class="content_left_text">
                     <div class="content_left_checkbox"></div>
-                    <p>Dresses</p>
+                    <p data-category='Dress'>Dresses</p>
                 </div>
                 <div class="content_left_text">
                     <div class="content_left_checkbox"></div>
-                    <p>Tops</p>
+                    <p data-category='Shorts'>Shorts</p>
                 </div>
                 <div class="content_left_text">
                     <div class="content_left_checkbox"></div>

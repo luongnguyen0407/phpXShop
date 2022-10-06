@@ -34,7 +34,8 @@ class Ajax extends Controller
     function getProductByPagination()
     {
         $offset = $_POST['offset'];
-        $this->productModal->getProductLimit($offset, 9, 'product');
+
+        $this->productModal->getProductLimit($offset, 9, 'product', isset($_POST['category']) ? $_POST['category'] : null);
     }
     function getAmount()
     {

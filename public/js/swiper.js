@@ -33,7 +33,6 @@ window.addEventListener("load", () => {
   //   });
   // })
   $(".scroll_top").click(() => {
-    console.log("ok");
     window.scrollTo({
       top: 0,
       behavior: "smooth",
