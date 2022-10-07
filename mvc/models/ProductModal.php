@@ -31,15 +31,15 @@ class ProductModal extends DB
     public function getProductLimit($offset, $limit = 9, $pro = null, $category = null)
     {
         //connect db
-        $sql = $category ?  "SELECT * FROM sanpham maDanhMuc =" . $category . " ORDER BY 'maSanPham' ASC LIMIT " . $limit . " OFFSET " . $offset . "" :  "SELECT * FROM sanpham ORDER BY 'maSanPham' ASC LIMIT " . $limit . " OFFSET " . $offset . "";
+        $sql = $category ?  "SELECT * FROM sanpham WHERE maDanhMuc ='" . $category . "' ORDER BY 'maSanPham' ASC LIMIT " . $limit . " OFFSET " . $offset . "" :  "SELECT * FROM sanpham ORDER BY 'maSanPham' ASC LIMIT " . $limit . " OFFSET " . $offset . "";
         $rows =  mysqli_query($this->link, $sql);
         $arr = array();
         while ($row = mysqli_fetch_array($rows)) {
             $arr[] = $row;
         }
         if ($pro) {
-            // echo json_encode($arr);
-            echo $sql;
+            echo json_encode($arr);
+            // echo $sql;
         } else {
             return json_encode($arr);
         }

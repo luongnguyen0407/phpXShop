@@ -24,7 +24,6 @@ $(document).ready(async function () {
       method: "POST",
       data: data,
       success: function (data) {
-        console.log(data);
         const res = JSON.parse(data);
         if (res.length > 0) {
           $(".content_right_products").text("");
