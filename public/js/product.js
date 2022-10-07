@@ -1,4 +1,6 @@
 $(document).ready(async function () {
+  const DEFAULT_LIMIT = 6;
+  // client auto scroll top when reload
   function autoScroll() {
     const scrollTo = document.querySelector(".product_content_right");
     let elmPosition = scrollTo.getBoundingClientRect();
@@ -7,9 +9,13 @@ $(document).ready(async function () {
       behavior: "smooth",
     });
   }
+
+  //format price
   const formatPrice = (number) => {
     return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   };
+
+  //load product
   const loadProduct = (offset = 0, isActive = 1, category = null) => {
     const data = category
       ? {
@@ -58,16 +64,23 @@ $(document).ready(async function () {
         </div>`;
             $(".content_right_products").append(template);
           });
-          getAmount(isActive);
+          category
+            ? getAmount(isActive, DEFAULT_LIMIT, category)
+            : getAmount(isActive);
           autoScroll();
         }
       },
     });
   };
-  const getAmount = (isActive, limit = 9) => {
+  loadProduct();
+
+  //get total product
+  const getAmount = (isActive, limit = DEFAULT_LIMIT, byCategory) => {
+    console.log(byCategory);
     $.ajax({
       url: "./Ajax/getAmount",
-      method: "GET",
+      method: "POST",
+      data: byCategory ? { byCategory } : "",
       success: function (data) {
         const totalPage = Math.ceil(+data / limit);
         let i = 1;
@@ -82,7 +95,8 @@ $(document).ready(async function () {
       },
     });
   };
-  loadProduct();
+
+  //get product when click pagination
   function getPagination(callFetchData) {
     const lisPagination = $(".pagination_item");
     [...lisPagination].forEach((item) => {
@@ -93,12 +107,14 @@ $(document).ready(async function () {
           }
           this.classList.add("active");
           const page = Number(this.textContent);
-          const offset = (page - 1) * 9;
+          const offset = (page - 1) * DEFAULT_LIMIT;
           callFetchData(offset, page);
         }
       });
     });
   }
+
+  //// handle responsive menu filter
   $(".responsive_bar").click(function () {
     $(".product_content_left").addClass("active");
   });
@@ -110,12 +126,20 @@ $(document).ready(async function () {
       $(".product_content_left").removeClass("active");
     }
   });
+  ////////
+
+  //// handle filter product by category
   let listRadio1 = $(".content_left_title1 .content_left_text");
   listRadio1 = [...listRadio1];
   for (const radio of listRadio1) {
     radio.addEventListener("click", function () {
       if (!this.matches(".chose")) {
-        loadProduct(0, 1, this.querySelector("p").dataset.category);
+        const categorySelect = this.querySelector("p").dataset.category;
+        const offset = 0;
+        const isActive = 1;
+        categorySelect === "all"
+          ? loadProduct(offset, isActive)
+          : loadProduct(offset, isActive, categorySelect);
       }
       for (const item of listRadio1) {
         item.classList.remove("chose");

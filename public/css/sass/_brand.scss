@@ -38,6 +38,15 @@
     gap: 24px;
     grid-template-columns: repeat(2, 1fr);
   }
+  .brand_show_img_left_div {
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    &:hover img {
+      transition: all linear 0.25s;
+      transform: scale(110%);
+    }
+  }
 }
 @include maxw(1024px) {
   .brand_section .brand_show_img_right .text_brand_deg {

@@ -35,10 +35,14 @@ class Ajax extends Controller
     {
         $offset = $_POST['offset'];
 
-        $this->productModal->getProductLimit($offset, 9, 'product', isset($_POST['category']) ? $_POST['category'] : null);
+        $this->productModal->getProductLimit($offset, 6, 'product', isset($_POST['category']) ? $_POST['category'] : null);
     }
     function getAmount()
     {
-        $this->productModal->getAmountProduct();
+        if (isset($_POST['byCategory'])) {
+            $this->productModal->getAmountProduct($_POST['byCategory']);
+        } else {
+            $this->productModal->getAmountProduct();
+        }
     }
 }

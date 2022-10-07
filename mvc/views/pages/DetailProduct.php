@@ -103,8 +103,18 @@ $img = json_decode($data['Product']["srcImg"]);
         </div>
         <div class="product_detail_review">
             <form action="" id="comment_form" data-product="<?= $data['Product']['maSanPham'] ?>">
-                <textarea class="content_comment_input" name="comment" placeholder="Enter your comment..."></textarea>
-                <button class="btn-comment">Comment</button>
+                <?php
+                if (!empty($user)) {
+                ?>
+                    <textarea class="content_comment_input" name="comment" placeholder="Enter your comment..."></textarea>
+                    <button class="btn-comment">Comment</button>
+                <?php
+                } else {
+                ?>
+                    <div>Bạn cần đăng nhập để dùng tính năng bình luận</div>
+                <?php
+                }
+                ?>
             </form>
             <h3>Product Reviews</h3>
             <ul class="product_detail_review_wrapper">

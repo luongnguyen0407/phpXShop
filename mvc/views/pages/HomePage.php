@@ -30,13 +30,23 @@
         <div class="brand_show_img">
             <div class="brand_show_img_right">
                 <p class="text_brand_deg">Explore new and popular styles</p>
-                <img src="/xshop/public/images/image-category-1.png" alt="">
+                <div class="brand_show_img_left_div">
+                    <img src="/xshop/public/images/image-category-1.png" alt="">
+                </div>
             </div>
             <div class="brand_show_img_left">
-                <img src="/xshop/public/images/image-category-2.png" alt="">
-                <img src="/xshop/public/images/image-category-3.png" alt="">
-                <img src="/xshop/public/images/image-category-4.png" alt="">
-                <img src="/xshop/public/images/image-category-5.png" alt="">
+                <div class="brand_show_img_left_div">
+                    <img src="/xshop/public/images/image-category-2.png" alt="">
+                </div>
+                <div class="brand_show_img_left_div">
+                    <img src="/xshop/public/images/image-category-3.png" alt="">
+                </div>
+                <div class="brand_show_img_left_div">
+                    <img src="/xshop/public/images/image-category-4.png" alt="">
+                </div>
+                <div class="brand_show_img_left_div">
+                    <img src="/xshop/public/images/image-category-5.png" alt="">
+                </div>
             </div>
         </div>
     </div>

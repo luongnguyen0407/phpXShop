@@ -2,6 +2,7 @@ $(document).ready(function () {
   const formatPrice = (number) => {
     return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   };
+
   const LoadProduct = (category = null) => {
     const data = category
       ? {

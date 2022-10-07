@@ -12,10 +12,10 @@ class ProductModal extends DB
         }
         echo json_encode($arr);
     }
-    public function getAmountProduct()
+    public function getAmountProduct($byCategory = null)
     {
         //connect db
-        $sql = "SELECT *  FROM sanpham";
+        $sql = isset($byCategory) ? "SELECT *  FROM sanpham WHERE maDanhMuc = '" . $byCategory . "'" : "SELECT *  FROM sanpham";
         $total =  $this->link->query($sql);
         $total = $total->num_rows;
         echo json_encode($total);

@@ -53,6 +53,7 @@ $(document).ready(function () {
         id: Number(idProduct),
       },
       success: function (data) {
+        console.log(data);
         const res = JSON.parse(data);
         $(".product_detail_review_wrapper").text("");
         res.forEach((item) => {

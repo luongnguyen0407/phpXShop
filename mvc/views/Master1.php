@@ -25,7 +25,59 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
         <header class="header">
             <div class="heading_header container">
                 <div class="icon_header_search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="input_header_search" type="text" placeholder="Search...">
+                    <i class="fa-solid fa-magnifying-glass header_icon_search"></i>
+                    <div class="drop_down_search">
+                        <!-- <div class="product_search_item">
+                            <a href="" class="product_search_item_link">
+                                <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                                <div class="product_search_item_text">
+                                    <p>Aó thun tay ngắn In Love</p>
+                                    <span>232.433d</span>
+                                </div>
+                            </a>
+                            <a href="" class="product_search_item_link">
+                                <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                                <div class="product_search_item_text">
+                                    <p>Aó thun tay ngắn In Love</p>
+                                    <span>232.433d</span>
+                                </div>
+                            </a>
+                            <a href="" class="product_search_item_link">
+                                <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                                <div class="product_search_item_text">
+                                    <p>Aó thun tay ngắn In Love</p>
+                                    <span>232.433d</span>
+                                </div>
+                            </a>
+                        </div> -->
+                        <div class="dropdown_skeleton">
+                            <div class="product_search_item_skeleton">
+                                <div class="skeleton_img skeleton"></div>
+                                <div class="skeleton_text">
+                                    <p class="skeleton"></p>
+                                    <span class="skeleton"></span>
+                                    <span class="skeleton"></span>
+                                </div>
+                            </div>
+                            <div class="product_search_item_skeleton">
+                                <div class="skeleton_img skeleton"></div>
+                                <div class="skeleton_text">
+                                    <p class="skeleton"></p>
+                                    <span class="skeleton"></span>
+                                    <span class="skeleton"></span>
+                                </div>
+                            </div>
+                            <div class="product_search_item_skeleton">
+                                <div class="skeleton_img skeleton"></div>
+                                <div class="skeleton_text">
+                                    <p class="skeleton"></p>
+                                    <span class="skeleton"></span>
+                                    <span class="skeleton"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="header_logo">
                     <a href="Home"><img src="/xshop/public/images/xshop.png" alt=""></a>
@@ -36,7 +88,9 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                     ?>
                         <div class="header_flex">
                             <i class="fa-solid fa-user"></i>
-                            <p>Account</p>
+                            <a href="Login">
+                                <p>Account</p>
+                            </a>
                         </div>
                         <div class="header_flex">
                             <i class="fa-solid fa-bag-shopping"></i>

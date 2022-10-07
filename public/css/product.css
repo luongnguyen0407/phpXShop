@@ -166,8 +166,12 @@
   background: #fdf6f6;
 }
 .content_right_product_Wishlist_box {
-  width: 70%;
+  flex: 1;
   background: #388186;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
 .content_right_product_message_box,
 .content_right_product_Wishlist_box {
