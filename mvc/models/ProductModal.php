@@ -1,7 +1,7 @@
 <?php
 class ProductModal extends DB
 {
-    public function getAllProduct($what = null)
+    public function getAllProduct($what = null, $whatPage = null)
     {
         //connect db
         $sql = isset($what) ? "SELECT * FROM `sanpham` WHERE `maDanhMuc` = '" . $what . "' LIMIT 12 " : 'SELECT * FROM `sanpham`';
@@ -10,7 +10,11 @@ class ProductModal extends DB
         while ($row = mysqli_fetch_array($rows)) {
             $arr[] = $row;
         }
-        echo json_encode($arr);
+        if (!$whatPage) {
+            echo json_encode($arr);
+        } else {
+            return json_encode($arr);
+        }
     }
     public function getAmountProduct($byCategory = null)
     {

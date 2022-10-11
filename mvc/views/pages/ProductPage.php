@@ -119,4 +119,4 @@
         </div>
     </aside>
 </section>
-<script src="/xshop/public/js/product.js"></script>
+<script src="./public/js/product.js"></script>

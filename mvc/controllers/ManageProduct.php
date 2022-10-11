@@ -7,7 +7,7 @@ class ManageProduct extends Controller
     {
         //modal
         if (!$this->checkUser(true)) {
-            header('location: /xshop/Home');
+            header('location: ./Home');
         }
         $this->productModal = $this->callModal('ProductModal');
     }
@@ -15,7 +15,7 @@ class ManageProduct extends Controller
     {
         $this->callView('Master3', [
             'Page' => 'ManagePage',
-            'Product' => $this->productModal->getAllProduct()
+            'Product' => $this->productModal->getAllProduct(null, "manage")
         ]);
     }
 }

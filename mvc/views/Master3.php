@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <base href="http://localhost/xshop/" target="_parent">
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
+    <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <link rel="stylesheet" href="public/css/admin.css">
     <script defer src="public/js/admin.js"></script>
     <title>Document</title>

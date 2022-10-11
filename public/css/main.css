@@ -1023,5 +1023,23 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
   }
 }
+.wrap_404page {
+  min-height: 500px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap_404page .wrap-text-404 {
+  text-align: center;
+}
+.wrap_404page .wrap-text-404 h2 {
+  font-size: 200px;
+  font-weight: 700;
+}
+.wrap_404page .wrap-text-404 p {
+  font-size: 25px;
+  font-weight: 600;
+}
 
 /*# sourceMappingURL=main.css.map */

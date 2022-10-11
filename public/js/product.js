@@ -36,7 +36,7 @@ $(document).ready(async function () {
           res.forEach((item) => {
             const listImg = JSON.parse(item.srcImg);
             const template = `<div class="content_right_product_box">
-            <a href="/xshop/Product/detailProduct/${item.maSanPham}">
+            <a href="./Product/detailProduct/${item.maSanPham}">
                 <img src="public/imgUp/${listImg[0]}" alt="">
                 <div class="content_right_product_box_text">
                     <p class="product_name_fer">${item.tenSanPham}</p>

@@ -1,6 +1,6 @@
 <section class="hero_collections">
     <div class="hero_img_flower">
-        <img src="/xshop/public/images/flower1.png" alt="">
+        <img src="./public/images/flower1.png" alt="">
     </div>
     <div class="container wrap_content_hero">
         <div class="hero_text">
@@ -13,39 +13,39 @@
                 <span>shop now</span></button>
         </div>
         <div class="hero_img">
-            <img class="hero_img_show" src="/xshop/public/images/engin-akyurt-jaZoffxg1yc-unsplash 1.png" alt="">
-            <img class="hero_img_border" src="/xshop/public/images/Rectangle 124.png" alt="">
+            <img class="hero_img_show" src="./public/images/engin-akyurt-jaZoffxg1yc-unsplash 1.png" alt="">
+            <img class="hero_img_border" src="./public/images/Rectangle 124.png" alt="">
         </div>
     </div>
 </section>
 <section class="brand_section">
     <div class="container">
         <div class="brand_img">
-            <img src="/xshop/public/images/brand-1.png" alt="">
-            <img src="/xshop/public/images/brand-5.png" alt="">
-            <img src="/xshop/public/images/brand-3.png" alt="">
-            <img src="/xshop/public/images/brand-2.png" alt="">
-            <img src="/xshop/public/images/brand-4.png" alt="">
+            <img src="./public/images/brand-1.png" alt="">
+            <img src="./public/images/brand-5.png" alt="">
+            <img src="./public/images/brand-3.png" alt="">
+            <img src="./public/images/brand-2.png" alt="">
+            <img src="./public/images/brand-4.png" alt="">
         </div>
         <div class="brand_show_img">
             <div class="brand_show_img_right">
                 <p class="text_brand_deg">Explore new and popular styles</p>
                 <div class="brand_show_img_left_div">
-                    <img src="/xshop/public/images/image-category-1.png" alt="">
+                    <img src="./public/images/image-category-1.png" alt="">
                 </div>
             </div>
             <div class="brand_show_img_left">
                 <div class="brand_show_img_left_div">
-                    <img src="/xshop/public/images/image-category-2.png" alt="">
+                    <img src="./public/images/image-category-2.png" alt="">
                 </div>
                 <div class="brand_show_img_left_div">
-                    <img src="/xshop/public/images/image-category-3.png" alt="">
+                    <img src="./public/images/image-category-3.png" alt="">
                 </div>
                 <div class="brand_show_img_left_div">
-                    <img src="/xshop/public/images/image-category-4.png" alt="">
+                    <img src="./public/images/image-category-4.png" alt="">
                 </div>
                 <div class="brand_show_img_left_div">
-                    <img src="/xshop/public/images/image-category-5.png" alt="">
+                    <img src="./public/images/image-category-5.png" alt="">
                 </div>
             </div>
         </div>
@@ -74,12 +74,12 @@
     </div>
 </section>
 <section class="banner_brand">
-    <img class="za" src="/xshop/public/images/1024px-Zara_Logo 1.png" alt="">
+    <img class="za" src="./public/images/1024px-Zara_Logo 1.png" alt="">
     <div class="banner_brand_img">
-        <img src="/xshop/public/images/brand_banner.png" alt="">
+        <img src="./public/images/brand_banner.png" alt="">
     </div>
     <div class="banner_brand_text">
-        <img src="/xshop/public/images/1024px-Zara_Logo 2.png" alt="">
+        <img src="./public/images/1024px-Zara_Logo 2.png" alt="">
         <p>Lustrous yet understated. The new evening
             wear collection exclusively offered at the
             reopened Giorgio Armani boutique in Los
@@ -107,7 +107,7 @@
                         ?>
                             <div class="swiper-slide">
                                 <div class="new_product_item">
-                                    <a href="/xshop/Product/detailProduct/<?= $item["maSanPham"] ?>">
+                                    <a href="./Product/detailProduct/<?= $item["maSanPham"] ?>">
                                         <div class="new_product_item_img">
                                             <img src="public/imgUp/<?= $img[0] ?>" alt="">
                                         </div>
@@ -146,40 +146,40 @@
                     <div class="intagram">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
-                    <img src="/xshop/public/images/i011 1.png" alt="">
+                    <img src="./public/images/i011 1.png" alt="">
                 </div>
                 <div class="flow_img_item">
                     <div class="intagram">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
-                    <img src="/xshop/public/images/i012 1.png" alt="">
+                    <img src="./public/images/i012 1.png" alt="">
                 </div>
                 <div class="flow_img_item">
                     <div class="intagram">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
-                    <img src="/xshop/public/images/i014 1.png" alt="">
+                    <img src="./public/images/i014 1.png" alt="">
 
                 </div>
                 <div class="flow_img_item">
                     <div class="intagram">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
-                    <img src="/xshop/public/images/i02 1.png" alt="">
+                    <img src="./public/images/i02 1.png" alt="">
 
                 </div>
                 <div class="flow_img_item">
                     <div class="intagram">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
-                    <img src="/xshop/public/images/i03 1.png" alt="">
+                    <img src="./public/images/i03 1.png" alt="">
 
                 </div>
                 <div class="flow_img_item">
                     <div class="intagram">
                         <i class="fa-brands fa-instagram"></i>
                     </div>
-                    <img src="/xshop/public/images/i07 1.png" alt="">
+                    <img src="./public/images/i07 1.png" alt="">
                 </div>
             </div>
         </div>
@@ -194,4 +194,4 @@
         </div>
     </div>
 </section>
-<script src="/xshop/public/js/home.js"></script>
+<script src="./public/js/home.js"></script>

@@ -13,6 +13,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     <base href="http://localhost/xshop/" target="_parent">
     <script src="public/js/jquery.js"></script>
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
+    <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/product.css">
     <!-- <link rel="stylesheet" href="public/css/details.css"> -->
@@ -80,7 +81,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                     </div>
                 </div>
                 <div class="header_logo">
-                    <a href="Home"><img src="/xshop/public/images/xshop.png" alt=""></a>
+                    <a href="Home"><img src="./public/images/xshop.png" alt=""></a>
                 </div>
                 <div class="icon_header_right">
                     <?php
@@ -162,7 +163,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                 <div class="top_footer ">
                     <div class="footer_col1">
                         <div class="left_footer_text">
-                            <img src="/xshop/public/images/xshop.png" alt="">
+                            <img src="./public/images/xshop.png" alt="">
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
@@ -209,7 +210,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
             <div class="bottom_footer">
                 <div class="container end_footer ">
                     <p>© 2022 Coral , Inc.</p>
-                    <img src="/xshop/public/images/icons_payment 1.png" alt="">
+                    <img src="./public/images/icons_payment 1.png" alt="">
                     <p class="scroll_top">Scroll to top</p>
                 </div>
             </div>

@@ -7,7 +7,7 @@ class Register extends Controller
     {
         //modal
         if ($this->checkUser()) {
-            header('location: /xshop/Home');
+            header('location: ./Home');
         }
         $this->userModal = $this->callModal('UserModal');
     }

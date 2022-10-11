@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <base href="http://localhost/xshop/" target="_parent">
+    <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <link rel="stylesheet" href="public/style/auth.css">
     <title>Document</title>
 </head>
@@ -23,7 +24,7 @@
 
             </div>
             <div class="wrapper_img_auth">
-                <img src="public/img/imgauth.png" alt="">
+                <img src="./public/img/imgauth.png" alt="">
             </div>
         </div>
     </div>

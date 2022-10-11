@@ -7,7 +7,7 @@ class AddProduct extends Controller
     {
         //modal
         if (!$this->checkUser(true)) {
-            header('location: /xshop/Home');
+            header('location: ./Home');
         }
         $this->productModal = $this->callModal('ProductModal');
     }
