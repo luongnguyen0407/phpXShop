@@ -9,7 +9,7 @@
     <base href="http://localhost/xshop/" target="_parent">
     <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <link rel="stylesheet" href="public/style/auth.css">
-    <title>Document</title>
+    <title>Auth</title>
 </head>
 
 <body>

@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <link rel="stylesheet" href="public/css/admin.css">
     <script defer src="public/js/admin.js"></script>
-    <title>Document</title>
+    <title>Admin</title>
 </head>
 
 <body>
