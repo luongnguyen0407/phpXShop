@@ -7,6 +7,7 @@ class App
     function __construct()
     {
         // Array ( [0] => Home [1] => abc [2] => 23 )
+        // Array ( [0] => Home [1] => abc [2] => 23 )
         $arrUrl = $this->UrlProcess();
         if ($arrUrl) {
             // Handle controller
