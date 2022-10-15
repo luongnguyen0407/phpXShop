@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
     <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <link rel="stylesheet" href="public/css/admin.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script defer src="public/js/admin.js"></script>
+    <script defer src="public/js/jquery.js"></script>
     <title>Admin</title>
 </head>
 

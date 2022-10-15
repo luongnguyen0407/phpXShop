@@ -61,4 +61,17 @@ class ProductModal extends DB
 
         // return json_encode($arr);
     }
+    public function Delete($idSp)
+    {
+        // connect db
+        $productDelete = $this->queryProduct($idSp);
+        $sql = "DELETE FROM `sanpham` WHERE `maSanPham` = $idSp";
+        $qk = $this->link->query($sql);
+        if ($qk) {
+            echo "true";
+            return $productDelete;
+        } else {
+            echo "false";
+        }
+    }
 }

@@ -5,7 +5,7 @@ class UserModal extends DB
     {
         //connect db
         $newPass = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO `khachhang`(email, passWord, userName) VALUES ('$email' , '$newPass','$userName')";
+        $sql = "INSERT INTO `khachhang`(`email`, `passWord`, `userName`) VALUES ('$email' , '$newPass','$userName')";
         $qr = "SELECT * FROM `khachhang` WHERE email = '$email' ";
         try {
             $this->link->query($sql);

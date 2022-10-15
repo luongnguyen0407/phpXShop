@@ -45,4 +45,19 @@ class Ajax extends Controller
             $this->productModal->getAmountProduct();
         }
     }
+    function deleteProduct()
+    {
+        if (isset($_POST['id'])) {
+            $productDel = $this->productModal->Delete($_POST['id']);
+            if (!empty(mysqli_num_rows($productDel))) {
+                $imgDel = mysqli_fetch_assoc($productDel);
+                $imgDel = json_decode($imgDel['srcImg']);
+                foreach ($imgDel as $val) {
+                    if (file_exists("./public/imgUp/$val")) {
+                        unlink("./public/imgUp/$val");
+                    }
+                }
+            }
+        }
+    }
 }

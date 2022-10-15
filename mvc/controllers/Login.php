@@ -7,7 +7,7 @@ class Login extends Controller
     {
         //modal
         if ($this->checkUser()) {
-            header('location: ./Home');
+            // header('location: ./Home');
         }
         $this->userModal = $this->callModal('UserModal');
     }
@@ -31,13 +31,12 @@ class Login extends Controller
                 $err['password'] = 'Bạn Phải Nhập Password';
             }
             if (empty($err)) {
-                // code
                 $kq = $this->userModal->findUser($email);
                 if ($kq["checkEmail"] == 1) {
                     $checkPass = password_verify($password, $kq["Data"]['password']);
                     if ($checkPass) {
                         $_SESSION['user'] = $kq["Data"];
-                        header('location: ./Home');
+                        header('location: ../Home');
                         // $kq["Data"]["chucVu"] == 1 ? header('location: ./admin/dashboad.php') : header('location: ./index.php');
                     } else {
                         $err['password'] = "Password hoặc Email không chính xác";
@@ -51,7 +50,7 @@ class Login extends Controller
                     'Page' => 'LoginPage',
                     'Error' => $err,
                     'Email' => $email,
-                    'Password' => $password
+                    'Password' => $password,
                 ]);
             }
         }

@@ -17,6 +17,9 @@ $arr = json_decode($data['Product'], true);
             </thead>
             <tbody>
                 <?php
+                if (empty($arr)) {
+                    die();
+                }
                 foreach ($arr as $item) { //foreach element in $arr
                     // $uses = $item['var1']; //etc
                     $img = json_decode($item['srcImg']);
@@ -31,9 +34,7 @@ $arr = json_decode($data['Product'], true);
                             <a href="./chagesp.php?id=<?php echo $item['maSanPham'] ?>">
                                 <i class="ti-pencil-alt chage"></i>
                             </a>
-                            <a href="./remove.php?id=<?php echo $item['maSanPham'] ?>">
-                                <i class="ti-trash remove"></i>
-                            </a>
+                            <i class="ti-trash remove" data-product=<?= $item['maSanPham'] ?>></i>
                         </td>
                     </tr>
 

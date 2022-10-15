@@ -26,3 +26,41 @@ if (hrs > 17) msg = "Good Evening,"; // After 5pm
 if (hrs > 22) msg = "Go To Bed!,"; // After 10pm
 
 gd.textContent = msg;
+
+const listRemove = document.querySelectorAll(".ti-trash.remove");
+[...listRemove].forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const productId = e.target.dataset.product;
+    if (!productId) return;
+    swal({
+      title: `Sản Phẩm id ${productId}`,
+      text: "Bạn muốn xóa sản phẩm này ?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) handleDeleteProduct(productId);
+    });
+  });
+});
+
+const handleDeleteProduct = (id) => {
+  $.ajax({
+    url: "./Ajax/deleteProduct",
+    method: "POST",
+    data: {
+      id,
+    },
+    success: function (data) {
+      if (data !== "false") {
+        swal("Poof! Your imaginary file has been deleted!", {
+          icon: "success",
+        }).then(() => {
+          location.reload();
+        });
+      } else {
+        swal("503", "Server error", "error");
+      }
+    },
+  });
+};
