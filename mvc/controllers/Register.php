@@ -45,8 +45,8 @@ class Register extends Controller
                 } else {
                     $kq = $this->userModal->registerUser($password, $email, $username);
                     if ($kq) {
-                        print_r($kq);
                         $_SESSION['user'] = $kq;
+                        header('location: ../home');
                     }
                 }
             }

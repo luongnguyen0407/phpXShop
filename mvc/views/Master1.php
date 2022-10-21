@@ -113,10 +113,18 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                             <?php
                             } else {
                             ?>
-                                <p><?= $user['userName'] ?></p>
+                                <a href="profile">
+                                    <p><?= $user['userName'] ?></p>
+                                </a>
                             <?php
                             }
                             ?>
+                        </div>
+                        <div class="header_flex">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <a href="LogOut">
+                                <p>Log Out</p>
+                            </a>
                         </div>
                         <div class="header_flex">
                             <i class="fa-solid fa-bag-shopping"></i>
