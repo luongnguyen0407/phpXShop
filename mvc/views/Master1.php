@@ -11,11 +11,13 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <base href="http://localhost/xshop/" target="_parent">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="public/js/jquery.js"></script>
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
     <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/product.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- <link rel="stylesheet" href="public/css/details.css"> -->
     <!-- CSS only -->
     <title>Xshop</title>
@@ -121,7 +123,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                             ?>
                         </div>
                         <div class="header_flex">
-                            <i class="fa-solid fa-bag-shopping"></i>
+                            <i class="fa-solid fa-power-off"></i>
                             <a href="LogOut">
                                 <p>Log Out</p>
                             </a>
@@ -226,7 +228,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     </div>
     <script src="public/js/jquery.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="public/js/swiper.js"></script>
     <!-- JavaScript Bundle with Popper -->
 

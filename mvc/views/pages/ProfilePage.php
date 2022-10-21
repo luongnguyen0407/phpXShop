@@ -11,30 +11,41 @@
                 <input type="text" value="admin" disabled>
             </div>
         </div>
-        <div class="box_address">
+        <div class="box_address scroll_style">
             <div>
                 <h3 class="box_address_heading">Add New Address</h3>
                 <form class="address_chose" autocomplete="off">
                     <div class="wrap_list_pr wrap_list_pr1" data-parent=1>
-                        <input placeholder="Tỉnh..." type="text" id='address'>
-                        <ul class="list_province">
+                        <input placeholder="Tỉnh..." type="text" id='address' readonly="readonly">
+                        <ul class="list_province scroll_style">
                         </ul>
                     </div>
                     <div class="wrap_list_pr wrap_list_pr2" data-parent=2>
-                        <input placeholder="Huyện..." type="text" id='address'>
-                        <ul class="list_province">
+                        <input placeholder="Huyện..." type="text" id='address' readonly="readonly">
+                        <ul class="list_province scroll_style">
                         </ul>
                     </div>
                     <div class="wrap_list_pr wrap_list_pr3" data-parent=3>
-                        <input placeholder="Xã..." type="text" id='address'>
-                        <ul class="list_province">
+                        <input placeholder="Xã..." type="text" id='address' readonly="readonly">
+                        <ul class="list_province scroll_style">
                         </ul>
                     </div>
                 </form>
                 <div class="wrap_list_aria">
                     <textarea class="detailAddress" placeholder="Your address..."></textarea>
                 </div>
+                <div class="address_chose input_list_phone">
+                    <input type="text" placeholder="Phone number" class="phone_oder">
+                    <input type="text" placeholder="Name order" class="name_oder">
+                </div>
                 <button class="address_btn">Add New Address</button>
+                </form>
+            </div>
+            <div class="wrap_list_address">
+                <ul>
+
+                </ul>
+
             </div>
         </div>
 </section>

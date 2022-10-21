@@ -7,11 +7,12 @@
   label {
     display: block;
   }
+
   .box_profile {
     background-color: whitesmoke;
     border-radius: 10px;
     width: 80%;
-    height: 400px;
+    height: 450px;
     display: flex;
     overflow-y: hidden;
     .box_info {
@@ -31,10 +32,10 @@
     }
     .box_address {
       overflow-y: scroll;
-      padding: 10px;
+      padding: 20px;
       width: 80%;
       .wrap_list_aria {
-        padding: 0 10px;
+        // padding: 0 10px;
         margin-top: 30px;
         .detailAddress {
           width: 100%;
@@ -52,7 +53,7 @@
         border: none;
         cursor: pointer;
         display: block;
-        margin: 0 auto;
+        margin: 20px auto;
       }
       &_heading {
         text-align: center;
@@ -62,8 +63,9 @@
       .address_chose {
         margin-top: 40px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 5px;
+
         .wrap_list_pr {
           width: 30%;
           position: relative;
@@ -94,6 +96,55 @@
           border-radius: 5px;
           width: 100%;
         }
+      }
+    }
+  }
+  .wrap_list_address {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+
+    .user_name_order {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .user_details_order,
+    .user_add_order {
+      color: #a8a29e;
+      font-size: 14px;
+    }
+    .user_details_order {
+      max-width: 300px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    li {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+      width: 400px;
+    }
+    .wrap_list_address_btn {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .btn_up {
+        background-color: #6a5af9;
+      }
+      .btn_del {
+        background-color: #ef4444;
+      }
+      button {
+        padding: 5px 15px;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
       }
     }
   }

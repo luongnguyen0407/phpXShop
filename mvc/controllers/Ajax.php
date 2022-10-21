@@ -3,12 +3,14 @@ class Ajax extends Controller
 {
     public $commentModal;
     public $productModal;
+    public $userModal;
 
     function __construct()
     {
         //modal
         $this->commentModal = $this->callModal('CommentModal');
         $this->productModal = $this->callModal('ProductModal');
+        $this->userModal = $this->callModal('UserModal');
     }
     function pushComment()
     {
@@ -17,11 +19,34 @@ class Ajax extends Controller
         $idProduct = $_POST['idProduct'];
         $this->commentModal->addComment($user['idKH'], $idProduct, $comment);
     }
+
     function getComment()
     {
         $id = $_POST['id'];
         $this->commentModal->getComment($id);
     }
+
+    function addAddress()
+    {
+        if (empty($_POST['data']) || !$this->checkUser()) return;
+        $data = json_decode($_POST['data'], true);
+        $userId = $_SESSION['user']['idKH'];
+        $this->userModal->addAddress($data, $userId);
+    }
+    function deleteAddress()
+    {
+        if (empty($_POST['id']) || !$this->checkUser()) return;
+        $this->userModal->delAddress($_POST['id']);
+    }
+
+    function getAddress()
+    {
+        if (!$this->checkUser()) return;
+        $userId = $_SESSION['user']['idKH'];
+        $this->userModal->getAllAddress($userId);
+    }
+
+
     function getProductByCategory()
     {
         if (isset($_POST['category'])) {

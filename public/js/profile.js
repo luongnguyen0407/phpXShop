@@ -14,7 +14,6 @@ window.addEventListener("load", () => {
     [...listLi].forEach((item) => {
       item.addEventListener("click", (e) => {
         const provinceId = e.target.dataset.province;
-
         inputShow.value = e.target.textContent;
         node.classList.remove("open");
         switch (nodeParent) {
@@ -61,19 +60,145 @@ window.addEventListener("load", () => {
   handleGetData(apiProvince, listProvince);
 
   listInput.forEach((item) => {
-    item.addEventListener("focus", (e) => {
+    item.addEventListener("click", (e) => {
       e.target.nextElementSibling.classList.toggle("open");
     });
   });
 
   btnSubmit.addEventListener("click", (e) => {
-    const detailAddress = document.querySelector(".detailAddress");
     e.preventDefault();
+    const checkNumberPhone = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
+    // if () console.log("ok");
     const province = listProvince.previousElementSibling.value;
-    const detailAddressVal = detailAddress.value;
+    const phoneNumber = $(".phone_oder").val();
+    const userName = $(".name_oder").val();
+    const detailAddressVal = $(".detailAddress").val();
     const district = listDistrict.previousElementSibling.value;
     const ward = listWard.previousElementSibling.value;
-    console.log(province, district, ward);
-    console.log(detailAddressVal);
+    if (
+      !province ||
+      !detailAddressVal ||
+      !district ||
+      !ward ||
+      !userName ||
+      !phoneNumber
+    ) {
+      showToast("Missing value");
+    }
+    if (!checkNumberPhone.test(phoneNumber)) {
+      showToast("Number phone invalid");
+      return;
+    }
+    let data = {
+      province,
+      district,
+      ward,
+      userName,
+      phoneNumber,
+      detailAddressVal,
+    };
+    data = JSON.stringify(data);
+    $.ajax({
+      url: "./Ajax/addAddress",
+      method: "POST",
+      data: { data },
+      success: function (data) {
+        if (!data) {
+          showToast("Server not response");
+          return;
+        }
+        showToast("Add new address success", true);
+        getListAddress();
+      },
+      error: function (error) {
+        swal("Server not response");
+      },
+    });
   });
+
+  function getListAddress() {
+    $.ajax({
+      url: "./Ajax/getAddress",
+      method: "GET",
+      success: function (res) {
+        let data = JSON.parse(res);
+        console.log(data);
+        if (data && data.length > 0) {
+          $(".wrap_list_address ul").text("");
+          data.forEach((element) => {
+            const template = ` <li>
+            <div class="wrap_list_address_text" data-address = ${element.idAddress}>
+                <p class="user_name_order">${element.tenKH} | ${element.sdt}</p>
+                <p class="user_add_order">${element.province}, ${element.district}, ${element.ward}</p>
+                <p class="user_details_order">${element.detail_address}</div>
+            <div class="wrap_list_address_btn">
+                <button class="btn_up">Update</button>
+                <button class="btn_del">Delete</button>
+            </div>
+        </li>`;
+            $(".wrap_list_address ul").append(template);
+          });
+          $(".btn_del").click(handleDeleteAddress);
+        }
+      },
+      error: function (error) {
+        swal("Server not response");
+      },
+    });
+  }
+  getListAddress();
+
+  const handleDeleteAddress = (e) => {
+    swal({
+      title: "Are you sure?",
+      text: "Bạn muốn xóa địa chỉ giao hàng này?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        const addressId =
+          e.target.parentNode.previousElementSibling.dataset.address;
+        $.ajax({
+          url: "./Ajax/deleteAddress",
+          method: "POST",
+          data: {
+            id: addressId,
+          },
+          success: function (res) {
+            if (+res === 1) {
+              // server return 1 when success
+              showToast("Delete address success");
+              e.target.parentNode.parentNode.remove();
+              swal("Poof! Your imaginary file has been deleted!", {
+                icon: "success",
+              });
+            }
+          },
+          error: function (error) {
+            swal("Server not response");
+          },
+        });
+      }
+    });
+  };
+
+  function showToast(mess = "This is a toast", type) {
+    let color = type
+      ? "linear-gradient(to right, #D2BB5A, #CCADDA)"
+      : "linear-gradient(to right, #D46A6A, #FFAAAA)";
+    Toastify({
+      text: mess,
+      duration: 2000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: color,
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
+  }
 });
