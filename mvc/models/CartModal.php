@@ -11,6 +11,28 @@ class CartModal extends DB
             return  $this->link->query($sql)->fetch_array(MYSQLI_NUM);
         }
     }
+    public function getAllProduct($userId)
+    {
+
+        $sql = "SELECT cart.idCart, cart.soLuong, sanpham.tenSanPham, sanpham.giaSanPham, sanpham.srcImg FROM `cart` INNER JOIN `sanpham` ON cart.maSanPham = sanpham.maSanPham WHERE cart.maKH = $userId";
+        $res = $this->link->query($sql);
+        if ($res) {
+            $arr = array();
+            while ($row = mysqli_fetch_array($res)) {
+                $arr[] = $row;
+            }
+            return $arr;
+        }
+    }
+
+    public function delProduct($cartId, $userId)
+    {
+        $sql = "DELETE FROM `cart` WHERE idCart = $cartId AND maKH = $userId";
+        if ($this->link->query($sql)) {
+            # code...
+            echo true;
+        }
+    }
     public function addCart($idProduct, $idKh)
     {
         $kt = "SELECT COUNT(idCart) FROM `cart` WHERE maSanPham = $idProduct AND maKH = $idKh";

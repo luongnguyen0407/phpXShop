@@ -59,6 +59,18 @@ class Ajax extends Controller
         $userId = $_SESSION['user']['idKH'];
         echo $this->cartModal->addCart($_POST['id'], $userId);
     }
+    function DeleteProductCart()
+    {
+        if (empty($_POST['id']) || !$this->checkUser()) return;
+        $userId = $_SESSION['user']['idKH'];
+        echo $this->cartModal->delProduct($_POST['id'], $userId);
+    }
+    function UpdateProductCart()
+    {
+        if (empty($_POST['id']) || !$this->checkUser()) return;
+        $userId = $_SESSION['user']['idKH'];
+        echo $this->cartModal->addCart($_POST['id'], $userId);
+    }
 
     //product
     function getProductByCategory()

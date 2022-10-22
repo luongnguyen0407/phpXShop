@@ -1,6 +1,6 @@
 <?php
 $img = json_decode($data['Product']["srcImg"]);
-// $coImg = 'egcvopsmdu2p8lifho9t.1664783359.webp'
+$coImg = 'egcvopsmdu2p8lifho9t.1664783359.webp'
 ?>
 
 <section class="product_detail_container">

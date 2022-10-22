@@ -17,6 +17,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/product.css">
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- <link rel="stylesheet" href="public/css/details.css"> -->
     <!-- CSS only -->

@@ -7,7 +7,7 @@ class Login extends Controller
     {
         //modal
         if ($this->checkUser()) {
-            // header('location: ./Home');
+            header('location: ./Home');
         }
         $this->userModal = $this->callModal('UserModal');
     }
