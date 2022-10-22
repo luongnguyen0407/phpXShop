@@ -121,8 +121,8 @@ window.addEventListener("load", () => {
       url: "./Ajax/getAddress",
       method: "GET",
       success: function (res) {
+        console.log(res);
         let data = JSON.parse(res);
-        console.log(data);
         if (data && data.length > 0) {
           $(".wrap_list_address ul").text("");
           data.forEach((element) => {

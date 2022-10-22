@@ -14,7 +14,34 @@ $(document).ready(async function () {
   const formatPrice = (number) => {
     return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   };
-
+  const handleAddProductToCart = (e) => {
+    const sl = $(".header_flex .sl_item").text();
+    $(".header_flex .sl_item").text(+sl + 1);
+    $.ajax({
+      url: "./Ajax/addProductToCart",
+      method: "POST",
+      data: {
+        id: e.target.dataset.add,
+      },
+      success: function (data) {
+        if (+data === 1) {
+          Toastify({
+            text: "Add product success",
+            duration: 2000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background:
+                " linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(120,203,34,1) 0%, rgba(0,212,255,1) 100%)",
+            },
+          }).showToast();
+        }
+      },
+    });
+  };
   //load product
   const loadProduct = (offset = 0, isActive = 1, category = null) => {
     const data = category
@@ -52,15 +79,18 @@ $(document).ready(async function () {
                 <div class="content_right_product_box_icon">
                     <p><i class="fa-sharp fa-solid fa-house"></i> Jakarta Barat</p>
                 </div>
+            </a>
+
                 <div class="content_right_product_message">
                     <div class="content_right_product_message_box">
                         <p><i class="fa-solid fa-message"></i></p>
                     </div>
-                    <div class="content_right_product_Wishlist_box">
-                        <p>Wishlist</p>
+                    <div class="content_right_product_Wishlist_box" data-add=${
+                      item.maSanPham
+                    }>
+                        <p>AddCart</p>
                     </div>
                 </div>
-            </a>
         </div>`;
             $(".content_right_products").append(template);
           });
@@ -68,6 +98,9 @@ $(document).ready(async function () {
             ? getAmount(isActive, DEFAULT_LIMIT, category)
             : getAmount(isActive);
           autoScroll();
+          $(".content_right_product_Wishlist_box").click(
+            handleAddProductToCart
+          );
         }
       },
     });
@@ -76,7 +109,6 @@ $(document).ready(async function () {
 
   //get total product
   const getAmount = (isActive, limit = DEFAULT_LIMIT, byCategory) => {
-    console.log(byCategory);
     $.ajax({
       url: "./Ajax/getAmount",
       method: "POST",

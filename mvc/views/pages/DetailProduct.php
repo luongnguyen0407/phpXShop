@@ -95,7 +95,7 @@ $img = json_decode($data['Product']["srcImg"]);
                         </div>
                     </div>
                     <div class="product_detail_button">
-                        <button>Add to Cart</button>
+                        <button data-add=<?= $data['Product']['maSanPham'] ?>>Add to Cart</button>
                         <button>Rent Now</button>
                     </div>
                 </div>

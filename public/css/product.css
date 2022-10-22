@@ -182,7 +182,7 @@
   font-weight: 600;
   font-size: 11.8185px;
   line-height: 18px;
-
+  pointer-events: none;
   color: #fdf6f6;
 }
 .wrap-pagination {

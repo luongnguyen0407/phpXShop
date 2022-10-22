@@ -174,8 +174,24 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   margin-right: 10px;
   align-items: center;
+  position: relative;
   gap: 5px;
   cursor: pointer;
+}
+.header .heading_header .header_flex .sl_item {
+  position: absolute;
+  bottom: 50%;
+  background-color: rgb(243, 96, 96);
+  border-radius: 100rem;
+  right: -16px;
+  font-size: 14px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0%;
+  color: white;
 }
 .header .heading_header .header_flex a {
   color: #000000;

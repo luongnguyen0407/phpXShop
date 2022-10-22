@@ -4,14 +4,18 @@ class Ajax extends Controller
     public $commentModal;
     public $productModal;
     public $userModal;
+    public $cartModal;
 
     function __construct()
     {
         //modal
         $this->commentModal = $this->callModal('CommentModal');
         $this->productModal = $this->callModal('ProductModal');
+        $this->cartModal = $this->callModal('CartModal');
         $this->userModal = $this->callModal('UserModal');
     }
+
+    //comment
     function pushComment()
     {
         $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
@@ -26,6 +30,7 @@ class Ajax extends Controller
         $this->commentModal->getComment($id);
     }
 
+    //profile
     function addAddress()
     {
         if (empty($_POST['data']) || !$this->checkUser()) return;
@@ -47,6 +52,15 @@ class Ajax extends Controller
     }
 
 
+    //cart
+    function addProductToCart()
+    {
+        if (empty($_POST['id']) || !$this->checkUser()) return;
+        $userId = $_SESSION['user']['idKH'];
+        echo $this->cartModal->addCart($_POST['id'], $userId);
+    }
+
+    //product
     function getProductByCategory()
     {
         if (isset($_POST['category'])) {
@@ -70,6 +84,7 @@ class Ajax extends Controller
             $this->productModal->getAmountProduct();
         }
     }
+
     function deleteProduct()
     {
         if (isset($_POST['id'])) {

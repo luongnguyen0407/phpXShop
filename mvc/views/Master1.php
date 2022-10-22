@@ -129,8 +129,12 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                             </a>
                         </div>
                         <div class="header_flex">
+                            <!-- $data['amountCart'] -->
+                            <div class="sl_item"><?= $data['amountCart'][0] ?></div>
                             <i class="fa-solid fa-bag-shopping"></i>
-                            <p>Shoping</p>
+                            <a href="./Cart">
+                                <p>Shoping</p>
+                            </a>
                         </div>
                     <?php
                     }

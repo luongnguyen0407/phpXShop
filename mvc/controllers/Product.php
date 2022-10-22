@@ -2,10 +2,13 @@
 class Product extends Controller
 {
     public $productModal;
+    public $cartModal;
+
     function __construct()
     {
         //modal
         $this->productModal = $this->callModal('ProductModal');
+        $this->cartModal = $this->callModal('CartModal');
     }
 
     function Show()
@@ -13,6 +16,7 @@ class Product extends Controller
         $this->callView('Master1', [
             'Page' => 'ProductPage',
             // 'Product' => $this->productModal->getProductLimit()
+            'amountCart' => $this->cartModal->getAmountInCart()
         ]);
     }
 
@@ -24,7 +28,8 @@ class Product extends Controller
             if (!empty($row)) {
                 $this->callView('Master1', [
                     'Page' => 'DetailProduct',
-                    'Product' => $row
+                    'Product' => $row,
+                    'amountCart' => $this->cartModal->getAmountInCart(),
                 ]);
             } else {
                 echo 'page not po';
