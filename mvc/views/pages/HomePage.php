@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
 <section class="hero_collections">
     <div class="hero_img_flower">
         <img src="./public/images/flower1.png" alt="">
@@ -195,3 +197,5 @@
     </div>
 </section>
 <script src="./public/js/home.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="public/js/swiper.js"></script>

@@ -121,7 +121,6 @@ window.addEventListener("load", () => {
       url: "./Ajax/getAddress",
       method: "GET",
       success: function (res) {
-        console.log(res);
         let data = JSON.parse(res);
         if (data && data.length > 0) {
           $(".wrap_list_address ul").text("");
@@ -173,6 +172,13 @@ window.addEventListener("load", () => {
               swal("Poof! Your imaginary file has been deleted!", {
                 icon: "success",
               });
+            } else {
+              swal(
+                "Bạn không thể xóa địa chỉ này vì đang có đơn hàng sử dụng",
+                {
+                  icon: "error",
+                }
+              );
             }
           },
           error: function (error) {

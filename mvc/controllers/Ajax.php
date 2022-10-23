@@ -5,6 +5,7 @@ class Ajax extends Controller
     public $productModal;
     public $userModal;
     public $cartModal;
+    public $orderModal;
 
     function __construct()
     {
@@ -13,6 +14,7 @@ class Ajax extends Controller
         $this->productModal = $this->callModal('ProductModal');
         $this->cartModal = $this->callModal('CartModal');
         $this->userModal = $this->callModal('UserModal');
+        $this->orderModal = $this->callModal('OrderModal');
     }
 
     //comment
@@ -62,8 +64,9 @@ class Ajax extends Controller
     function DeleteProductCart()
     {
         if (empty($_POST['id']) || !$this->checkUser()) return;
+        $delAll = empty($_POST['all']) ? null : 'deleteAll';
         $userId = $_SESSION['user']['idKH'];
-        echo $this->cartModal->delProduct($_POST['id'], $userId);
+        echo $this->cartModal->delProduct($_POST['id'], $userId, $delAll);
     }
     function UpdateProductCart()
     {
@@ -71,6 +74,21 @@ class Ajax extends Controller
         $userId = $_SESSION['user']['idKH'];
         echo $this->cartModal->updateProduct($_POST['idProduct'], $userId, $_POST['amount']);
     }
+    function OrderProduct()
+    {
+        if (empty($_POST['data']) || empty($_POST['idAddress']) ||  empty($_POST['total']) || !$this->checkUser()) return;
+        // echo '<pre>';
+        // print_r($_POST['data']);
+        // echo '</pre>';
+        // // foreach ($_POST['data'] as &$row) {
+        // //     echo $row["idProduct"];
+        // // }
+        $userId = $_SESSION['user']['idKH'];
+        echo $this->orderModal->AddNewOrder($_POST['data'], $userId, $_POST['idAddress'], $_POST['total']);
+    }
+
+
+
 
     //product
     function getProductByCategory()

@@ -10,8 +10,8 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="http://localhost/xshop/" target="_parent">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="public/js/jquery.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="public/css/main.css">
@@ -229,10 +229,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
             </div>
         </footer>
     </div>
-    <script src="public/js/jquery.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="public/js/swiper.js"></script>
     <!-- JavaScript Bundle with Popper -->
 
     <!-- <script src="./js/main.js"></script> -->

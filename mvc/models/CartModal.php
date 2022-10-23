@@ -14,7 +14,7 @@ class CartModal extends DB
     public function getAllProduct($userId)
     {
 
-        $sql = "SELECT cart.idCart, cart.soLuong, sanpham.tenSanPham, sanpham.giaSanPham, sanpham.srcImg FROM `cart` INNER JOIN `sanpham` ON cart.maSanPham = sanpham.maSanPham WHERE cart.maKH = $userId";
+        $sql = "SELECT cart.idCart, cart.soLuong, cart.maSanPham, sanpham.tenSanPham, sanpham.giaSanPham, sanpham.srcImg FROM `cart` INNER JOIN `sanpham` ON cart.maSanPham = sanpham.maSanPham WHERE cart.maKH = $userId";
         $res = $this->link->query($sql);
         if ($res) {
             $arr = array();
@@ -25,12 +25,17 @@ class CartModal extends DB
         }
     }
 
-    public function delProduct($cartId, $userId)
+    public function delProduct($cartId, $userId, $all)
     {
         $sql = "DELETE FROM `cart` WHERE idCart = $cartId AND maKH = $userId";
+        if (!empty($all)) {
+            $sql = "DELETE FROM `cart` WHERE maKH = $userId";
+        }
         if ($this->link->query($sql)) {
             # code...
             echo true;
+        } else {
+            echo "0";
         }
     }
     public function updateProduct($idProduct, $userId, $amount)

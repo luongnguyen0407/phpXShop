@@ -22,7 +22,7 @@
                         foreach ($data['listProduct'] as &$row) {
                             $img = json_decode($row['srcImg']);
                     ?>
-                            <tr>
+                            <tr class="one_product_ca" data-sle="<?= $row["maSanPham"] ?>">
                                 <td class="column1">
                                     <img src="public/imgUp/<?= isset($img[0]) ? $img[0] : $coImg  ?>" alt="">
                                 </td>
@@ -77,7 +77,7 @@
                     <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                 </header>
                 <main class="modal__content" id="modal-1-content">
-                    <p>Tổng đơn : 200.000đ</p>
+                    <p class="total_payment"></p>
                     <div>
                         <p>Chọn Địa Chỉ Giao Hàng</p>
                         <ul class="list_address scroll_style">
@@ -86,9 +86,9 @@
 
                                 foreach ($data['listAddress'] as &$row) {
                             ?>
-                                    <li class="list_address_item">
+                                    <li class="list_address_item" data-address="<?= $row['idAddress'] ?>">
                                         <div class="list_address_check"></div>
-                                        <div class="wrap_list_address_text" data-address=${element.idAddress}>
+                                        <div class="wrap_list_address_text">
                                             <p class="user_name_order"><?= $row['tenKH'] ?> | <?= $row['sdt'] ?></p>
                                             <p class="user_add_order"><?= $row['province'] ?>, <?= $row['district'] ?>, <?= $row['district'] ?></p>
                                             <p class="user_details_order"><?= $row['detail_address'] ?></p>
@@ -109,7 +109,7 @@
                     </div>
                 </main>
                 <footer class="modal__footer">
-                    <button class="modal__btn modal__btn-primary">Đặt hàng</button>
+                    <button class="modal__btn modal__btn-primary btn_dh">Đặt hàng</button>
                     <button class="modal__btn modal__btn_add" data-micromodal-close aria-label="Close this dialog window"><a href="Profile">Thêm địa chỉ</a></button>
                 </footer>
             </div>
