@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 class UserModal extends DB
 {
     public function registerUser($password, $email, $userName)
@@ -41,7 +44,7 @@ class UserModal extends DB
         }
         // echo $kq;
     }
-    public function getAllAddress($userId)
+    public function getAllAddress($userId, $type)
     {
         $sql = "SELECT * FROM `chitietkh` WHERE maKH = $userId";
         $rows = $this->link->query($sql);
@@ -49,7 +52,11 @@ class UserModal extends DB
         while ($row = mysqli_fetch_array($rows)) {
             $arr[] = $row;
         }
-        echo json_encode($arr);
+        if (empty($type)) {
+            echo json_encode($arr);
+        } else {
+            return $arr;
+        }
     }
     public function delAddress($id)
     {

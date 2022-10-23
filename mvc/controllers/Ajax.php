@@ -48,7 +48,7 @@ class Ajax extends Controller
     {
         if (!$this->checkUser()) return;
         $userId = $_SESSION['user']['idKH'];
-        $this->userModal->getAllAddress($userId);
+        $this->userModal->getAllAddress($userId, null);
     }
 
 
@@ -67,9 +67,9 @@ class Ajax extends Controller
     }
     function UpdateProductCart()
     {
-        if (empty($_POST['id']) || !$this->checkUser()) return;
+        if (empty($_POST['idProduct']) || empty($_POST['amount']) || !$this->checkUser()) return;
         $userId = $_SESSION['user']['idKH'];
-        echo $this->cartModal->addCart($_POST['id'], $userId);
+        echo $this->cartModal->updateProduct($_POST['idProduct'], $userId, $_POST['amount']);
     }
 
     //product

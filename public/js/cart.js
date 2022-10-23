@@ -1,20 +1,48 @@
 window.addEventListener("DOMContentLoaded", function () {
-  //   $(".oder-btn").click(function () {
-  //     console.log("ok");
-  //     MicroModal.init();
-  //     MicroModal.show("modal-1");
-  //   });
+  $(".oder-btn").click(function () {
+    $(".micromodal-slide").addClass("is-open");
+    $(".micromodal-slide").attr("aria-hidden", "false");
+  });
+  $(".modal__close").click(function () {
+    $(".micromodal-slide").removeClass("is-open");
+    $(".micromodal-slide").attr("aria-hidden", "true");
+  });
+
+  $(".list_address_item").click(function () {
+    $(".list_address_item").removeClass("active");
+    $(this).addClass("active");
+  });
 
   $(".column4.column_input .su").click(function () {
     let amount = $(this.previousElementSibling).val();
     $(this.previousElementSibling).val(+amount + 1);
     handleCalculate(this.parentNode);
+    updateToDB(
+      $(this.previousElementSibling).val(),
+      this.parentNode.dataset.id
+    );
   });
   $(".column4.column_input .rai").click(function () {
     let amount = $(this.nextElementSibling).val();
     $(this.nextElementSibling).val(+amount - 1 < 0 ? 0 : +amount - 1);
     handleCalculate(this.parentNode);
+    updateToDB($(this.nextElementSibling).val(), this.parentNode.dataset.id);
   });
+
+  function updateToDB(sl, id) {
+    if (!sl || !id) return;
+    axios({
+      method: "post",
+      url: "./Ajax/UpdateProductCart",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      data: {
+        idProduct: id,
+        amount: sl,
+      },
+    }).then(function (response) {
+      // console.log(response.data);
+    });
+  }
 
   $(".column7 .remove").click(function () {
     swal({
@@ -84,4 +112,19 @@ window.addEventListener("DOMContentLoaded", function () {
       return +text.replace(/[^a-zA-Z0-9 ]/g, "");
     }
   }
+  // function debounce(fn, ms) {
+  //   let timer;
+
+  //   return function () {
+  //     // Nhận các đối số
+  //     const args = arguments;
+  //     const context = this;
+
+  //     if (timer) clearTimeout(timer);
+
+  //     timer = setTimeout(() => {
+  //       fn.apply(context, args);
+  //     }, ms);
+  //   };
+  // }
 });

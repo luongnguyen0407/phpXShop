@@ -1373,6 +1373,47 @@ body::-webkit-scrollbar-thumb {
   overflow-y: auto;
   box-sizing: border-box;
 }
+.modal__container .list_address {
+  margin-top: 20px;
+  height: 150px;
+  overflow-y: scroll;
+}
+.modal__container .list_address .list_address_item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.modal__container .list_address .active {
+  opacity: 1;
+}
+.modal__container .list_address .list_address_check {
+  width: 15px;
+  height: 15px;
+  border-radius: 100rem;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+.modal__container .list_address .active .list_address_check {
+  background-color: cornflowerblue;
+}
+.modal__container .list_address .user_name_order {
+  font-weight: 600;
+}
+.modal__container .list_address .user_add_order,
+.modal__container .list_address .user_details_order {
+  color: #a8a29e;
+  font-size: 14px;
+}
+.modal__container .list_address .user_details_order {
+  max-width: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
 
 .modal__header {
   display: flex;
@@ -1393,6 +1434,7 @@ body::-webkit-scrollbar-thumb {
 .modal__close {
   background: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 .modal__header .modal__close:before {
@@ -1443,6 +1485,11 @@ body::-webkit-scrollbar-thumb {
 .modal__btn-primary {
   background-color: #00449e;
   color: #fff;
+}
+
+.modal__btn_add {
+  background-color: #f62682;
+  color: white;
 }
 
 /**************************\

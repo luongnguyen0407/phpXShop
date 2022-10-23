@@ -33,6 +33,14 @@ class CartModal extends DB
             echo true;
         }
     }
+    public function updateProduct($idProduct, $userId, $amount)
+    {
+        $sql = "UPDATE `cart` SET `soLuong`=$amount WHERE cart.idCart = $idProduct AND cart.maKH = $userId;";
+        if ($this->link->query($sql)) {
+            echo true;
+            return;
+        }
+    }
     public function addCart($idProduct, $idKh)
     {
         $kt = "SELECT COUNT(idCart) FROM `cart` WHERE maSanPham = $idProduct AND maKH = $idKh";

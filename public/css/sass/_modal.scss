@@ -18,6 +18,47 @@
   border-radius: 4px;
   overflow-y: auto;
   box-sizing: border-box;
+  .list_address {
+    margin-top: 20px;
+    height: 150px;
+    overflow-y: scroll;
+    .list_address_item {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+    .active {
+      opacity: 1;
+    }
+    .list_address_check {
+      width: 15px;
+      height: 15px;
+      border-radius: 100rem;
+      margin: 10px;
+      border: 1px solid #ccc;
+    }
+    .active .list_address_check {
+      background-color: cornflowerblue;
+    }
+    .user_name_order {
+      font-weight: 600;
+    }
+    .user_add_order,
+    .user_details_order {
+      color: #a8a29e;
+      font-size: 14px;
+    }
+    .user_details_order {
+      max-width: 300px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
 }
 
 .modal__header {
@@ -39,6 +80,7 @@
 .modal__close {
   background: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 .modal__header .modal__close:before {
@@ -89,6 +131,10 @@
 .modal__btn-primary {
   background-color: #00449e;
   color: #fff;
+}
+.modal__btn_add {
+  background-color: #f62682;
+  color: white;
 }
 
 /**************************\

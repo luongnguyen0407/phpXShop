@@ -8,17 +8,15 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <base href="http://localhost/xshop/" target="_parent">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="public/js/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
-    <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/product.css">
-    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <!-- <link rel="stylesheet" href="public/css/details.css"> -->
     <!-- CSS only -->
     <title>Xshop</title>

@@ -1,6 +1,6 @@
 <section class="product_main_section">
     <aside class="products_content container">
-        <div class="product_content_left">
+        <div class="product_content_left scroll_style">
             <div class="content_left_title content_left_title1">
                 <h3>Products</h3>
                 <div class="content_left_text chose">
@@ -119,4 +119,4 @@
         </div>
     </aside>
 </section>
-<script src="./public/js/product.js"></script>
+<script defer src="./public/js/product.js"></script>
