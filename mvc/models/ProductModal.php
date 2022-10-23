@@ -61,6 +61,19 @@ class ProductModal extends DB
 
         // return json_encode($arr);
     }
+    public function UpdateProduct($tenSP, $danhMuc, $mieuTa, $giaSP, $listImg, $id)
+    {
+        //connect db
+        $sql = "UPDATE `sanpham` SET `tenSanPham`='$tenSP',`maDanhMuc`='$danhMuc',`moTa`='$mieuTa',`giaSanPham`='$giaSP',`srcImg`='$listImg' WHERE maSanPham = $id";
+        $qk = $this->link->query($sql);
+        if ($qk) {
+            return true;
+        } else {
+            return false;
+        }
+
+        // return json_encode($arr);
+    }
     public function Delete($idSp)
     {
         // connect db

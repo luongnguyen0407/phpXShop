@@ -1,10 +1,13 @@
 <?php
 class CartModal extends DB
 {
-    public function getAmountInCart()
+    public function getAmountInCart($id)
     {
+        if (empty($id)) {
+            return '0';
+        }
         $sql = "SELECT COUNT(idCart)
-        FROM cart";
+        FROM cart WHERE maKH = $id";
         // return json_encode($arr);
         if ($this->link->query($sql)) {
             # code...

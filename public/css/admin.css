@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap");
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -1340,5 +1339,48 @@ textarea::-webkit-scrollbar-thumb {
 .table-main .remove:hover {
   color: red;
 }
+.section_dashboard {
+  display: flex;
+}
 
 /*# sourceMappingURL=main.css.map */
+
+/* ManageOrder */
+.wrap_order_manage {
+  grid-column: 2/5;
+  margin-top: 20px;
+  padding: 10px;
+  border-left: 1px solid #ccc;
+}
+.order_item_item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+.order_item_action {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.order_item_action .btn_delete_order,
+.order_item_action .btn_detail_order {
+  padding: 5px 20px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.order_item_action .btn_detail_order {
+  background-color: #288ad6;
+}
+.order_item_action .btn_delete_order {
+  background-color: red;
+}
+.order_item_info p {
+  font-size: 14px;
+  color: rgb(143, 141, 141);
+}
+.order_item_info p:last-child {
+  color: #6a5af9;
+}

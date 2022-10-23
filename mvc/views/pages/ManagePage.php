@@ -1,7 +1,6 @@
 <?php
 $arr = json_decode($data['Product'], true);
 ?>
-
 <div class="content-main">
     <div class="table">
         <table class="table-main">
@@ -31,7 +30,7 @@ $arr = json_decode($data['Product'], true);
                         <td class="column3"><?php echo $item['tenSanPham'] ?></td>
                         <td class="column4"><?php echo number_format($item['giaSanPham'], 0, ".", ".") . "đ" ?></td>
                         <td class="column7">
-                            <a href="./chagesp.php?id=<?php echo $item['maSanPham'] ?>">
+                            <a href="./UpdateProduct/Show/<?php echo $item['maSanPham'] ?>">
                                 <i class="ti-pencil-alt chage"></i>
                             </a>
                             <i class="ti-trash remove" data-product=<?= $item['maSanPham'] ?>></i>
@@ -45,9 +44,24 @@ $arr = json_decode($data['Product'], true);
         </table>
     </div>
 </div>
-</div>
-
-
-</body>
-
-</html>
+<?php
+if (!empty($data['Status'])) {
+?>
+    <script>
+        Toastify({
+            text: "update success",
+            duration: 2000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #D2BB5A, #CCADDA)",
+            },
+            onClick: function() {}, // Callback after click
+        }).showToast();
+    </script>
+<?php
+}
+?>

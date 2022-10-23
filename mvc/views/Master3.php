@@ -9,7 +9,9 @@
     <base href="http://localhost/xshop/" target="_parent">
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
     <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="public/css/admin.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script defer src="public/js/admin.js"></script>
     <script defer src="public/js/jquery.js"></script>
@@ -49,7 +51,7 @@
                                 <a class="dropdown-item">
                                     <i class="fa-solid fa-user"></i> My Profile</a>
                                 <a style="color:black;" href="Home" class="dropdown-item"><i class="fa-solid fa-house"></i> Home</a>
-                                <a style="color:red;" href="../logOut.php" class="dropdown-item"><i class="fa-solid fa-power-off"></i> Sign Out</a>
+                                <a style="color:red;" href="LogOut" class="dropdown-item"><i class="fa-solid fa-power-off"></i> Sign Out</a>
                             </div>
                         </div>
                     </li>
@@ -60,7 +62,7 @@
             <aside class="container aside">
                 <ul class="list-menu">
                     <li>
-                        <a href="AddProduct"><i class="ti-stats-up"></i> Dashboard</a>
+                        <a href="Dashboard"><i class="ti-stats-up"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="AddProduct"><i class="ti-pencil-alt"></i> Thêm sản phẩm </a>
@@ -69,7 +71,7 @@
                         <a href="ManageProduct"><i class="ti-gallery"></i> Sản Phẩm </a>
                     </li>
                     <li>
-                        <a href="#"><i class="ti-user"></i> thành viên </a>
+                        <a href="ManageOrder"><i class="ti-shopping-cart"></i> Đơn Hàng </a>
                     </li>
                 </ul>
             </aside>

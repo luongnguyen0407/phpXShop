@@ -22,7 +22,7 @@ class Cart extends Controller
 
         $this->callView('Master1', [
             'Page' => 'CartPage',
-            'amountCart' => $this->cartModal->getAmountInCart(),
+            'amountCart' => $this->cartModal->getAmountInCart($userId),
             'listProduct' => $this->cartModal->getAllProduct($userId),
             'listAddress' => $this->userModal->getAllAddress($userId, 'arr'),
         ]);

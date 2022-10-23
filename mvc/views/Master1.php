@@ -108,8 +108,11 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                             if ($user['chucVu'] == 1) {
                             ?>
 
-                                <a href="AddProduct">
+                                <a href="Dashboard">
                                     <p><?= $user['userName'] ?></p>
+                                </a>
+                                <a href="profile">
+                                    <p>Profile</p>
                                 </a>
                             <?php
                             } else {

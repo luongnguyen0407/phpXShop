@@ -13,10 +13,11 @@ class Home extends Controller
 
     function Show()
     {
+        $userId = !empty($_SESSION['user']['idKH']) ? $_SESSION['user']['idKH'] : null;
         $this->callView('Master1', [
             'Page' => 'HomePage',
             'Product' => $this->productModal->getProductLimit(0, 5),
-            'amountCart' => $this->cartModal->getAmountInCart()
+            'amountCart' => $this->cartModal->getAmountInCart($userId)
         ]);
     }
     function detailProduct($id)

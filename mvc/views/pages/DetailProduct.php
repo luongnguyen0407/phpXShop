@@ -95,7 +95,7 @@ $coImg = 'egcvopsmdu2p8lifho9t.1664783359.webp'
                         </div>
                     </div>
                     <div class="product_detail_button">
-                        <button data-add=<?= $data['Product']['maSanPham'] ?>>Add to Cart</button>
+                        <button class="btn_add_cart" data-add=<?= $data['Product']['maSanPham'] ?>>Add to Cart</button>
                         <button>Rent Now</button>
                     </div>
                 </div>

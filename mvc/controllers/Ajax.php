@@ -130,4 +130,10 @@ class Ajax extends Controller
             }
         }
     }
+
+    //manage 
+    function DashboardManage()
+    {
+        $this->orderModal->Manage();
+    }
 }

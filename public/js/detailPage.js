@@ -80,4 +80,34 @@ $(document).ready(function () {
       },
     });
   }
+
+  const handleAddProductToCart = (e) => {
+    const sl = $(".header_flex .sl_item").text();
+    $(".header_flex .sl_item").text(+sl + 1);
+    $.ajax({
+      url: "./Ajax/addProductToCart",
+      method: "POST",
+      data: {
+        id: e.target.dataset.add,
+      },
+      success: function (data) {
+        if (+data === 1) {
+          Toastify({
+            text: "Add product success",
+            duration: 2000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background:
+                " linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(120,203,34,1) 0%, rgba(0,212,255,1) 100%)",
+            },
+          }).showToast();
+        }
+      },
+    });
+  };
+  $(".btn_add_cart").click(handleAddProductToCart);
 });
