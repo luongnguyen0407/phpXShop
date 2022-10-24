@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="public/css/admin.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="public/css/modal.css">
     <script defer src="public/js/admin.js"></script>
     <script defer src="public/js/jquery.js"></script>
     <title>Admin</title>
@@ -24,7 +26,7 @@
             <div class="container wraper-ad">
                 <div class="start-admin">
                     <i class="fa-solid fa-bars"></i>
-                    <img src="../../img/admin.svg" alt="">
+                    <!-- <img src="../../img/admin.svg" alt=""> -->
                 </div>
                 <div class="good-admin">
                     <div class="morning">

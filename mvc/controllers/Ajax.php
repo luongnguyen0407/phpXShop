@@ -52,6 +52,13 @@ class Ajax extends Controller
         $userId = $_SESSION['user']['idKH'];
         $this->userModal->getAllAddress($userId, null);
     }
+    function UpdatePass()
+    {
+        if (!$this->checkUser() || empty($_POST['passOld']) || empty($_POST['passNew']) || empty($_POST['passNewRef'])) return;
+        if ($_POST['passNew'] != $_POST['passNewRef']) return;
+        $useId = $_SESSION['user']['idKH'];
+        $this->userModal->updatePass($useId, $_POST['passNew'], $_POST['passOld']);
+    }
 
 
     //cart
@@ -135,5 +142,23 @@ class Ajax extends Controller
     function DashboardManage()
     {
         $this->orderModal->Manage();
+    }
+    function OrderManage()
+    {
+        if (!empty($_POST['id'])) {
+            $this->orderModal->getDetailBill($_POST['id']);
+        }
+    }
+    function UpdateStatus()
+    {
+        if (!empty($_POST['status']) && !empty($_POST['id'])) {
+            $this->orderModal->updateBill($_POST['status'], $_POST['id']);
+        }
+    }
+    function DeleteBill()
+    {
+        if (!empty($_POST['idBillRemove'])) {
+            $this->orderModal->deleteBill($_POST['idBillRemove']);
+        }
     }
 }

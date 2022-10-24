@@ -15,6 +15,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="public/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/modal.css">
     <link rel="stylesheet" href="public/css/product.css">
     <link rel="icon" type="image/x-icon" href="./public/images/title.ico">
     <!-- <link rel="stylesheet" href="public/css/details.css"> -->

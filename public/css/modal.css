@@ -18,47 +18,47 @@
   border-radius: 4px;
   overflow-y: auto;
   box-sizing: border-box;
-  .list_address {
-    margin-top: 20px;
-    height: 150px;
-    overflow-y: scroll;
-    .list_address_item {
-      display: flex;
-      border-bottom: 1px solid #ccc;
-      padding: 10px;
-      opacity: 0.5;
-      cursor: pointer;
-    }
-    .active {
-      opacity: 1;
-    }
-    .list_address_check {
-      width: 15px;
-      height: 15px;
-      border-radius: 100rem;
-      margin: 10px;
-      border: 1px solid #ccc;
-    }
-    .active .list_address_check {
-      background-color: cornflowerblue;
-    }
-    .user_name_order {
-      font-weight: 600;
-    }
-    .user_add_order,
-    .user_details_order {
-      color: #a8a29e;
-      font-size: 14px;
-    }
-    .user_details_order {
-      max-width: 300px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-    }
-  }
+}
+.list_address {
+  margin-top: 20px;
+  height: 150px;
+  overflow-y: scroll;
+}
+.list_address_item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.active {
+  opacity: 1;
+}
+.list_address_check {
+  width: 15px;
+  height: 15px;
+  border-radius: 100rem;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+.active .list_address_check {
+  background-color: cornflowerblue;
+}
+.user_name_order {
+  font-weight: 600;
+}
+.user_add_order,
+.user_details_order {
+  color: #a8a29e;
+  font-size: 14px;
+}
+.user_details_order {
+  max-width: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .modal__header {
@@ -138,8 +138,8 @@
 }
 
 /**************************\
-    Demo Animation Style
-  \**************************/
+      Demo Animation Style
+    \**************************/
 @keyframes mmfadeIn {
   from {
     opacity: 0;
@@ -203,4 +203,75 @@
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
+}
+.modal__content_one_product {
+  max-width: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+/* toogle  */
+.switch {
+  position: relative;
+  cursor: pointer;
+  width: 80px;
+  height: 35px;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  background: #000;
+  border-radius: 100rem;
+  transition: background-color 0.25s linear;
+}
+
+.switch:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 40px;
+  background-color: #fff;
+  top: 2px;
+  left: 3px;
+  transition: background-color 0.25s linear, transform 0.25s linear;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-input:checked + .switch {
+  background-color: #6a5af9;
+}
+
+.switch-input:checked + .switch:after {
+  transform: translateX(42px);
+  background-color: white;
+}
+.wrap_btn_status {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.status_bill {
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.25s linear;
+}
+.status_pending {
+  background-color: #fdc1c1;
+  color: rgb(253, 65, 65);
+}
+.status_approved {
+  background-color: #dcfce7;
+  color: rgb(18, 218, 58);
+}
+
+.modal__content2 {
+  width: 300px;
+  min-height: 200px;
 }

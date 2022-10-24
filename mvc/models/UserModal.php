@@ -66,4 +66,21 @@ class UserModal extends DB
             echo true;
         }
     }
+    public function updatePass($id, $passNew, $passOld)
+    {
+        $sql = "SELECT * FROM `khachhang` WHERE idKH = '$id' ";
+        $resu =  $this->link->query($sql);
+        $data = $resu->fetch_assoc();
+        $checkPass =  password_verify($passOld, $data["password"]);
+        if (!$checkPass) {
+            echo 'error';
+        } else {
+            $newPass = password_hash($passNew, PASSWORD_DEFAULT);
+            $sqlUpdate = "UPDATE `khachhang` SET `password`='$newPass' WHERE idKH = '$id'";
+            $res =  $this->link->query($sqlUpdate);
+            if ($res) {
+                echo true;
+            }
+        }
+    }
 }

@@ -4,9 +4,49 @@ window.addEventListener("load", () => {
   const listWard = document.querySelector(".wrap_list_pr3 .list_province");
   const listInput = document.querySelectorAll(".wrap_list_pr input");
   const btnSubmit = document.querySelector(".address_btn");
+  const formChangePass = document.querySelector(".form_modal_pass");
+  const modal = document.querySelector("#modal-3");
+  const btnClose = document.querySelector(".modal__close");
+  const btnChangePass = document.querySelector(".btn_change_pass");
   const apiProvince = "https://vapi.vnappmob.com//api/province";
   const apiDistrict = "https://vapi.vnappmob.com//api/province/district/";
   const apiWard = "https://vapi.vnappmob.com//api/province/ward/";
+  btnClose.addEventListener("click", () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+  });
+  btnChangePass.addEventListener("click", () => {
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+  });
+  formChangePass.addEventListener("submit", (e) => {
+    const passOld = document.querySelector(".passOld").value;
+    const passNew = document.querySelector(".passNew").value;
+    const passNewRef = document.querySelector(".passNewRef").value;
+    e.preventDefault();
+    if (!passOld || !passNew || !passNewRef)
+      return showToast("Bạn cần nhâp đủ trường");
+    if (passNew !== passNewRef)
+      return showToast("Mật khẩu nhập lại không giống");
+
+    axios({
+      method: "POST",
+      url: "./Ajax/updatePass",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      data: {
+        passOld,
+        passNew,
+        passNewRef,
+      },
+    }).then((res) => {
+      console.log(res.data);
+      if (Number(res.data) === 1) {
+        showToast("Đổi mật khẩu thành công", "sc");
+      } else {
+        showToast("Sai mật khẩu cũ");
+      }
+    });
+  });
   const handleSelectProvince = (node) => {
     const listLi = node.querySelectorAll("li");
     const inputShow = node.previousElementSibling;
@@ -84,6 +124,7 @@ window.addEventListener("load", () => {
       !phoneNumber
     ) {
       showToast("Missing value");
+      return;
     }
     if (!checkNumberPhone.test(phoneNumber)) {
       showToast("Number phone invalid");
