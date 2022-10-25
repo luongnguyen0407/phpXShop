@@ -68,11 +68,10 @@ $(document).ready(function () {
           return;
         }
         data.forEach((element) => {
-          //   console.log(element);
           const template = ` <li class="list_comment_item">
             <div class="wrap_list_comment_text">
                 <p class="user_name_order">${element.userName}</p>
-                <p class="user_add_order user_user_comment">${element.userName}</p>
+                <p class="user_add_order user_user_comment">${element.dateCreate}</p>
                 <p class="user_details_order">${element.content}</p>
             </div>
             <div class="modal_action">
