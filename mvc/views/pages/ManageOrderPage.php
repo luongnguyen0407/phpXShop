@@ -18,7 +18,6 @@
                         <button class="btn_delete_order">Xóa</button>
                     </div>
                 </li>
-
             <?php
             }
         } else {

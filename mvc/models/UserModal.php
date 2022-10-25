@@ -1,7 +1,4 @@
 <?php
-
-use function PHPSTORM_META\type;
-
 class UserModal extends DB
 {
     public function registerUser($password, $email, $userName)

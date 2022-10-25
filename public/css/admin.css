@@ -1333,6 +1333,9 @@ textarea::-webkit-scrollbar-thumb {
 .table-main .column3 {
   text-transform: capitalize;
 }
+.column7 .btn_comment:hover {
+  color: rgb(42, 125, 248);
+}
 .table-main .chage:hover {
   color: greenyellow;
 }
@@ -1383,4 +1386,21 @@ textarea::-webkit-scrollbar-thumb {
 }
 .order_item_info p:last-child {
   color: #6a5af9;
+}
+.scroll_style::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+.scroll_style::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+.scroll_style::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #979494;
 }

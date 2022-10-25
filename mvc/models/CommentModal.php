@@ -13,7 +13,7 @@ class CommentModal extends DB
     public function getComment($idSp)
     {
         //connect db
-        $getComment = "SELECT * FROM comment INNER JOIN khachhang ON comment.userCreate = khachhang.idKH WHERE comment.productId = $idSp ORDER BY comment.dateCreate DESC LIMIT 4";
+        $getComment = "SELECT khachhang.idKH, khachhang.userName, comment.idCm, comment.dateCreate, comment.content FROM comment INNER JOIN khachhang ON comment.userCreate = khachhang.idKH WHERE comment.productId = $idSp ORDER BY comment.dateCreate DESC LIMIT 4";
         // return json_encode($arr);
         $res =  $this->link->query($getComment);
         $kq = array();
@@ -22,5 +22,17 @@ class CommentModal extends DB
         }
         $js_array = json_encode($kq);
         echo $js_array;
+    }
+    public function delComment($idCm)
+    {
+        //connect db
+        $getComment = "DELETE FROM `comment` WHERE idCm = $idCm";
+        // return json_encode($arr);
+        $res =  $this->link->query($getComment);
+        if ($res) {
+            echo true;
+        } else {
+            echo 'error';
+        }
     }
 }

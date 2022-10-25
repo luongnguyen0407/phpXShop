@@ -23,6 +23,7 @@
   margin-top: 20px;
   height: 150px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .list_address_item {
   display: flex;
@@ -271,7 +272,30 @@
   color: rgb(18, 218, 58);
 }
 
+/* comment */
+.list_product_comment {
+  height: 300px;
+}
 .modal__content2 {
   width: 300px;
   min-height: 200px;
+}
+.list_comment_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.btn_remove_comment {
+  background-color: rgb(249, 222, 222);
+  color: red;
+}
+.btn_view_comment {
+  background-color: rgb(222, 229, 249);
+  color: rgb(86, 48, 254);
+}
+.list_comment_item .modal_action {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }

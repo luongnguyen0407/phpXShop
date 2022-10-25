@@ -30,7 +30,7 @@ gd.textContent = msg;
 const listRemove = document.querySelectorAll(".ti-trash.remove");
 [...listRemove].forEach((item) => {
   item.addEventListener("click", (e) => {
-    const productId = e.target.dataset.product;
+    const productId = e.target.parentNode.dataset.product;
     if (!productId) return;
     swal({
       title: `Sản Phẩm id ${productId}`,

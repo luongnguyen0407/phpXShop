@@ -28,8 +28,14 @@ class Ajax extends Controller
 
     function getComment()
     {
-        $id = $_POST['id'];
-        $this->commentModal->getComment($id);
+        if (empty($_POST['id'])) return;
+        $this->commentModal->getComment($_POST['id']);
+    }
+
+    function deleteComment()
+    {
+        if (empty($_POST['idCm'])) return;
+        $this->commentModal->delComment($_POST['idCm']);
     }
 
     //profile
