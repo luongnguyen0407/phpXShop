@@ -28,7 +28,6 @@ window.addEventListener("load", () => {
       return showToast("Bạn cần nhâp đủ trường");
     if (passNew !== passNewRef)
       return showToast("Mật khẩu nhập lại không giống");
-
     axios({
       method: "POST",
       url: "./Ajax/updatePass",
@@ -39,9 +38,11 @@ window.addEventListener("load", () => {
         passNewRef,
       },
     }).then((res) => {
-      console.log(res.data);
       if (Number(res.data) === 1) {
         showToast("Đổi mật khẩu thành công", "sc");
+        $(".form_modal_pass input").val("");
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
       } else {
         showToast("Sai mật khẩu cũ");
       }
@@ -108,7 +109,6 @@ window.addEventListener("load", () => {
   btnSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     const checkNumberPhone = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
-    // if () console.log("ok");
     const province = listProvince.previousElementSibling.value;
     const phoneNumber = $(".phone_oder").val();
     const userName = $(".name_oder").val();
@@ -150,6 +150,8 @@ window.addEventListener("load", () => {
         }
         showToast("Add new address success", true);
         getListAddress();
+        $(".wrap_form_address input").val("");
+        $(".detailAddress").val("");
       },
       error: function (error) {
         swal("Server not response");

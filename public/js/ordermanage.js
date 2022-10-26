@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
     btn.addEventListener("click", function () {
       swal({
         title: "Are you sure?",
-        text: "Bạn muốn xóa hóa đơn này ?",
+        text: "Bạn muốn xóa đơn hàng này ?",
         icon: "warning",
         buttons: true,
         dangerMode: true,
@@ -109,7 +109,6 @@ window.addEventListener("load", () => {
       }
     });
   }
-
   function handleChecked() {
     inputSwitch.checked = true;
     status.classList.remove("status_pending");
@@ -122,7 +121,6 @@ window.addEventListener("load", () => {
     status.classList.remove("status_approved");
     status.textContent = "Pending";
   }
-
   function showToast(mess = "This is a toast", type) {
     let color = type
       ? "linear-gradient(to right, #D2BB5A, #CCADDA)"

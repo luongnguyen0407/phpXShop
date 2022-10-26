@@ -1,7 +1,7 @@
 <section class="wrap_profile">
     <div class="box_profile">
         <div class="box_info">
-            <img src="https://images.unsplash.com/photo-1666526330716-7eb7ddfc5aca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+            <img src="public/img/avatars.jpg" alt="">
             <div>
                 <label for="">Email:</label>
                 <input type="text" value="admin@gmail.com" disabled>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="box_address scroll_style">
-            <div>
+            <div class="wrap_form_address">
                 <h3 class="box_address_heading">Add New Address</h3>
                 <form class="address_chose" autocomplete="off">
                     <div class="wrap_list_pr wrap_list_pr1" data-parent=1>

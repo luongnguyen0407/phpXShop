@@ -26,6 +26,7 @@ class Product extends Controller
         $userId = !empty($_SESSION['user']['idKH']) ? $_SESSION['user']['idKH'] : null;
         if ($id) {
             $qr = $this->productModal->queryProduct($id);
+            if (!$qr) return;
             $row = $qr->fetch_array();
             if (!empty($row)) {
                 $this->callView('Master1', [

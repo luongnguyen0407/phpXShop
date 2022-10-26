@@ -122,8 +122,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
   $(".column7 .remove").click(function () {
     swal({
-      title: "Are you sure?",
-      text: "Once deleted, you will not be able to recover this imaginary file!",
+      title: "Xóa sản phẩm này ?",
+      text: "Tác vụ này sẽ xóa sản phẩm ra khỏi giỏ hàng",
       icon: "warning",
       buttons: true,
       dangerMode: true,

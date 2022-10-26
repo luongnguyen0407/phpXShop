@@ -42,14 +42,11 @@
                     <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                 </header>
                 <main class="modal__content modal__content2" id="modal-1-content">
-                    <h3 class="modal__content_heading">
+                    <h4 class="modal__content_heading">
                         Sản phẩm :
-                    </h3>
+                    </h4>
                     <div class="list_product_order">
-                        <p class="modal__content_one_product">Váy ngắn x 2</p>
-                        <p class="modal__content_one_product">Váy ngắn x 2</p>
-                        <p class="modal__content_one_product">Váy ngắn x 2</p>
-                        <p class="modal__content_one_product">Váy ngắn x 2</p>
+
                     </div>
                     <div class="wrap_btn_status">
                         <div>

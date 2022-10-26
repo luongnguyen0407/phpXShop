@@ -16,8 +16,7 @@
     <div class="wrapper">
         <div class="auth_main">
             <div class="wrapper_form_auth">
-                <h2>Your logo</h2>
-                <p class="form_auth_title">Login</p>
+                <a href="home"><img src="./public/images/xshop.png" alt=""></a>
                 <?php
                 require_once "./mvc/views/pages/" . $data['Page'] . ".php"
                 ?>

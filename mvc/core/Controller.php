@@ -3,8 +3,10 @@ class Controller
 {
     public function callModal($modal)
     {
-        require_once "./mvc/models/" . $modal . ".php";
-        return new $modal;
+        if (file_exists("./mvc/models/" . $modal . ".php")) {
+            require_once "./mvc/models/" . $modal . ".php";
+            return new $modal;
+        }
     }
     public function checkUser($isAdmin = false)
     {
@@ -17,6 +19,10 @@ class Controller
     }
     public function callView($view, $data = [])
     {
-        require_once "./mvc/views/" . $view . ".php";
+        if (file_exists("./mvc/views/" . $view . ".php")) {
+            require_once "./mvc/views/" . $view . ".php";
+        } else {
+            require_once "./mvc/views/Master1.php";
+        }
     }
 }
